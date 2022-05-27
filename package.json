@@ -50,6 +50,7 @@
     "@tamagui/babel-plugin": "1.0.1-beta.41",
     "@types/react": "~17.0.21",
     "@types/react-native": "~0.67.6",
+    "babel-plugin-transform-inline-environment-variables": "^0.4.4",
     "eslint": "^8.11.0",
     "typescript": "~4.6.3"
   }

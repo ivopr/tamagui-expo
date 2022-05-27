@@ -1,3 +1,5 @@
+process.env.TAMAGUI_TARGET = 'native'
+
 module.exports = function (api) {
   api.cache(true);
   return {
@@ -10,7 +12,10 @@ module.exports = function (api) {
           components: ["tamagui"],
           config: "./tamagui.config.ts",
         },
-      ]
+      ],
+      ['transform-inline-environment-variables', {
+        include: 'TAMAGUI_TARGET'
+      }]
     ],
   };
 };

@@ -4089,6 +4089,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"babel-plugin-transform-inline-environment-variables@npm:^0.4.4":
+  version: 0.4.4
+  resolution: "babel-plugin-transform-inline-environment-variables@npm:0.4.4"
+  checksum: fa361287411301237fd8ce332aff4f8e8ccb8db30e87a2ddc7224c8bf7cd792eda47aca24dc2e09e70bce4c027bc8cbe22f4999056be37a25d2472945df21ef5
+  languageName: node
+  linkType: hard
+
 "babel-preset-expo@npm:~9.1.0":
   version: 9.1.0
   resolution: "babel-preset-expo@npm:9.1.0"
@@ -5991,6 +5998,7 @@ __metadata:
     "@tamagui/theme-base": ^1.0.1-beta.41
     "@types/react": ~17.0.21
     "@types/react-native": ~0.67.6
+    babel-plugin-transform-inline-environment-variables: ^0.4.4
     eslint: ^8.11.0
     expo: ~45.0.3
     expo-font: ~10.1.0
