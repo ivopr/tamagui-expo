@@ -9,8 +9,8 @@ export const UserDetailScreen: FC<NativeStackScreenProps<StackNavigatorParams, "
   const goToHome = () => navigation.canGoBack() ? navigation.goBack() : navigation.navigate("home")
   
   return (
-    <YStack space>
-      <Paragraph fontWeight="800">{`User ID: ${id}`}</Paragraph>
+    <YStack p="$4" space>
+      <Paragraph fow="800">{`User ID: ${id}`}</Paragraph>
       <Button onPress={goToHome}>👈 Go Home</Button>
     </YStack>
   );
