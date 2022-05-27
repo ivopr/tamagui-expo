@@ -40,7 +40,7 @@ export const HomeScreen: FC<NativeStackScreenProps<StackNavigatorParams, "home">
 function DrawerDemo() {
   const [show, setShow] = useState(false)
   const dimensions = useWindowDimensions()
-  
+
   return (
     <>
       <Button
