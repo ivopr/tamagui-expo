@@ -1,7 +1,7 @@
 import { Drawer } from '@tamagui/drawer'
 import { ChevronDown, ChevronUp } from '@tamagui/feather-icons'
 import React, { FC, useState } from 'react'
-import { useWindowDimensions } from 'react-native'
+import { Text, useWindowDimensions } from 'react-native'
 import { Anchor, Button, H1, Paragraph, XStack, YStack } from 'tamagui'
 import { NativeStackScreenProps } from '@react-navigation/native-stack'
 import { StackNavigatorParams } from '../../navigation/native'
@@ -13,8 +13,11 @@ export const HomeScreen: FC<NativeStackScreenProps<StackNavigatorParams, "home">
 
   return (
     <YStack p="$4" space>
+      <Text style={{
+        textAlign: "center"
+      }}>Try</Text>
       <YStack space="$2">
-        <H1>Welcome to Tamagui.</H1>
+        <H1 debug ta="center">Welcome to Tamagui.</H1>
         <Paragraph>
           Here is a basic starter to show you how you can navigate from one screen to another. This
           screen uses the same code on Next.js and React Native.

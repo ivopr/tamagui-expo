@@ -41,6 +41,9 @@ const bodyFont = createInterFont(
 )
 
 const config = createTamagui({
+  defaultTheme: 'light',
+  shouldAddPrefersColorThemes: true,
+  themeClassNameOnRoot: true,
   themes,
   fonts: {
     heading: headingFont,
