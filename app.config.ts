@@ -10,12 +10,16 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
   slug: "tamaguifmt",
   version: "1.0.0",
   orientation: "portrait",
-  icon: IS_DEV ? "./assets/icons/icon-dev.png" : IS_BETA ? "./assets/icons/icon-beta.png" : "./assets/icons/icon.png",
+  icon: IS_DEV
+    ? "./assets/icons/icon-dev.png"
+    : IS_BETA
+    ? "./assets/icons/icon-beta.png"
+    : "./assets/icons/icon.png",
   userInterfaceStyle: "light",
   splash: {
     backgroundColor: "#ddffe2",
     image: "./assets/splash.png",
-    resizeMode: "contain"
+    resizeMode: "contain",
   },
   updates: {
     fallbackToCacheTimeout: 0,
@@ -23,27 +27,20 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
   android: {
     package: IS_DEV ? "dev.tamagui.expo.devclient" : "dev.tamagui.expo.client",
     googleServicesFile: "google-services.json",
-    versionCode: 1
+    versionCode: 1,
   },
   androidNavigationBar: {
     backgroundColor: "#ddffe2",
-    barStyle: "dark-content"
+    barStyle: "dark-content",
   },
   androidStatusBar: {
     backgroundColor: "#ddffe2",
-    barStyle: "dark-content"
+    barStyle: "dark-content",
   },
   plugins: [
     "@react-native-firebase/app",
     "@react-native-firebase/crashlytics",
     "@react-native-firebase/perf",
     "@react-native-google-signin/google-signin",
-    [
-      "expo-notifications",
-      {
-        icon: "./assets/icons/notification.png",
-        color: "#ffffff",
-      },
-    ],
   ],
 });
