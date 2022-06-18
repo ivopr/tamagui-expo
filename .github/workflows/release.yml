@@ -1,0 +1,31 @@
+name: Release 
+
+on:
+  - workflow_dispatch
+  push:
+    branches:
+      - main
+
+
+jobs:
+  release:
+    name: Bump Version and Release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup Repo
+        uses: actions/checkout@v2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 16.x
+          cache: yarn
+
+      - name: Install dependencies
+        run: yarn install
+        
+      - name: Semantic release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+        run: npx semantic-release
+        
