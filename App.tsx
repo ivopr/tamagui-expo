@@ -1,9 +1,13 @@
+import "react-native-get-random-values";
+import "expo-dev-client";
+
+import { useFonts } from "expo-font";
+import { FC } from "react";
+
 import { NativeNavigation } from "./navigation/native";
 import { Provider } from "./provider";
-import { useFonts } from "expo-font";
-import React from "react";
 
-export default function App() {
+const App: FC = () => {
   const [loaded] = useFonts({
     Inter: require("@tamagui/font-inter/ttf/Inter.ttf"),
   });
@@ -17,4 +21,6 @@ export default function App() {
       <NativeNavigation />
     </Provider>
   );
-}
+};
+
+export default App;

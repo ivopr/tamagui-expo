@@ -1,10 +1,6 @@
 import { NavigationContainer } from "@react-navigation/native";
-import React, { FC } from "react";
+import { FC } from "react";
 
 export const NavigationProvider: FC = ({ children }) => {
-  return (
-    <NavigationContainer>
-      {children}
-    </NavigationContainer>
-  );
-}
+  return <NavigationContainer>{children}</NavigationContainer>;
+};

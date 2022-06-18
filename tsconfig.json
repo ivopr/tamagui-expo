@@ -1,10 +1,4 @@
 {
-  "compilerOptions": {
-    "strictNullChecks": true,
-    "noUncheckedIndexedAccess": true,
-    "composite": true,
-    "esModuleInterop": true,
-    "jsx": "preserve"
-  },
+  "compilerOptions": {},
   "extends": "expo/tsconfig.base",
 }
