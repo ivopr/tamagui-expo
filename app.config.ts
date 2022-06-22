@@ -15,6 +15,6 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
   android: {
     package: IS_DEV ? "dev.tamagui.expo.devclient" : "dev.tamagui.expo.client",
     googleServicesFile: "google-services.json",
-    versionCode: 7,
+    versionCode: 8,
   },
 });
