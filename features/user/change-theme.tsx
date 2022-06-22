@@ -1,9 +1,8 @@
 import { Moon, Sun, Zap } from "@tamagui/feather-icons";
-import { observer } from "mobx-react";
 import { FC } from "react";
 import { Button, Dialog, ListItem, Spacer, Switch } from "tamagui";
+import { useThemeControl } from "../../provider/useTheme";
 
-import { useStores } from "../../stores";
 
 export const ChangeTheme: FC = () => {
   return (
@@ -60,15 +59,16 @@ export const ChangeTheme: FC = () => {
   );
 };
 
-const ColorSchemeListItem = observer(() => {
-  const { ui } = useStores();
-  const checked = ui.appearance === "light";
+const ColorSchemeListItem = (() => {
+  const theme = useThemeControl();
+
+  const checked = theme.value === "light";
 
   return (
     <ListItem
       pressTheme
       onPress={() => {
-        ui.setAppearanceMode(ui.appearance === "light" ? "dark" : "light");
+        theme.set(theme.value === "light" ? "dark" : "light");
       }}
       w="100%"
     >

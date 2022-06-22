@@ -1,22 +1,15 @@
-import { observer } from "mobx-react";
 import { FC } from "react";
 import { Avatar, H4, YStack } from "tamagui";
 
-import { useStores } from "../../stores";
+type UserDetailProps = {
+  id: string;
+}
 
-export const UserDetails: FC = observer(() => {
-  const { auth } = useStores();
+export const UserDetails: FC<UserDetailProps> = (({id}) => {
 
   return (
     <YStack ai="center" space="$1">
-      <Avatar circular size="$12">
-        <Avatar.Image
-          defaultSource={0}
-          src={auth.user?.photoURL}
-        />
-        <Avatar.Fallback />
-      </Avatar>
-      <H4 textTransform="capitalize">{auth.user?.displayName}</H4>
+      <H4 textTransform="capitalize">{id}</H4>
     </YStack>
   );
 });

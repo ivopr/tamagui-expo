@@ -1,9 +1,8 @@
 import { Settings as SettingsIcon } from "@tamagui/feather-icons";
-import { observer } from "mobx-react";
 import { FC } from "react";
 import { Button, Dialog } from "tamagui";
 
-export const Settings: FC = observer(() => {
+export const Settings: FC = (() => {
   return (
     <Dialog>
       <Dialog.Trigger asChild>

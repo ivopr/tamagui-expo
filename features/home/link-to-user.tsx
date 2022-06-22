@@ -1,9 +1,6 @@
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
-import { observer } from "mobx-react";
 import { FC } from "react";
 import { Button } from "tamagui";
-
-import { useStores } from "../../stores";
 
 type LinkToUserProps = {
   navigation: NativeStackNavigationProp<
@@ -13,14 +10,11 @@ type LinkToUserProps = {
   >;
 };
 
-export const LinkToUser: FC<LinkToUserProps> = observer(({ navigation }) => {
-  const { auth } = useStores();
+export const LinkToUser: FC<LinkToUserProps> = (({ navigation }) => {
 
-  const goToUser = () => navigation.navigate("user-detail");
-
-  if (!auth.signedIn) {
-    return null;
-  }
+  const goToUser = () => navigation.navigate("user-detail", {
+    id: "John Doe"
+  });
 
   return (
     <Button themeInverse onPress={goToUser}>

@@ -1,38 +1,36 @@
-import "react-native-get-random-values";
 import "expo-dev-client";
 
-import messaging from "@react-native-firebase/messaging";
 import { useFonts } from "expo-font";
-import { FC, useEffect } from "react";
+import { FC, useMemo, useState } from "react";
+import { Appearance } from "react-native";
 
 import { NativeNavigation } from "./navigation/native";
 import { Provider } from "./provider";
-import { StoresProvider } from "./stores";
+import { ThemeContext } from "./provider/useTheme";
 
 const App: FC = () => {
+  const [theme, setTheme] = useState(Appearance.getColorScheme());
   const [loaded] = useFonts({
     Inter: require("@tamagui/font-inter/ttf/Inter.ttf"),
   });
 
-  useEffect(() => {
-    // Listen for push notifications
-    const unsubscribe = messaging().onMessage(console.log);
-
-    return () => {
-      unsubscribe();
+  const themeContext = useMemo(() => {
+    return {
+      value: theme,
+      set: setTheme,
     };
-  }, []);
+  }, [theme]);
 
   if (!loaded) {
     return null;
   }
 
   return (
-    <Provider>
-      <StoresProvider>
+    <ThemeContext.Provider value={themeContext}>
+      <Provider defaultTheme={theme}>
         <NativeNavigation />
-      </StoresProvider>
-    </Provider>
+      </Provider>
+    </ThemeContext.Provider>
   );
 };
 

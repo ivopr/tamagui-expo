@@ -9,10 +9,12 @@ import { UserDetails } from "./user-details";
 
 export const UserDetailScreen: FC<
   NativeStackScreenProps<StackNavigatorParams, "user-detail">
-> = () => {
+> = ({route}) => {
+  const {id} = route.params;
+
   return (
     <YStack bc="$background" f={1} p="$4" space>
-      <UserDetails />
+      <UserDetails id={id} />
       <YStack space="$1" w="100%">
         <H5>Account</H5>
         <Button icon={Edit3} themeInverse>

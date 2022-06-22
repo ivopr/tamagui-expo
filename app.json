@@ -14,13 +14,8 @@
       "fallbackToCacheTimeout": 0
     },
     "plugins": [
-      "@react-native-firebase/app",
-      "@react-native-firebase/crashlytics",
-      "@react-native-firebase/perf",
-      "@react-native-google-signin/google-signin",
       "expo-dev-client",
-      "expo-splash-screen",
-      "dayjs"
+      "expo-splash-screen"
     ]
   }
 }

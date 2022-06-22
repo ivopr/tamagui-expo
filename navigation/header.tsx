@@ -1,52 +1,22 @@
-import firebaseAuth, { FirebaseAuthTypes } from "@react-native-firebase/auth";
-import { GoogleSignin } from "@react-native-google-signin/google-signin";
 import {
   NavigationProp,
   RouteProp,
   useNavigation,
   useRoute,
 } from "@react-navigation/native";
-import { ArrowLeft, LogIn, LogOut } from "@tamagui/feather-icons";
-import { observer } from "mobx-react";
+import { ArrowLeft } from "@tamagui/feather-icons";
 import { FC } from "react";
-import { Avatar, Button, H2, XStack } from "tamagui";
-
-import { webClientId } from "../constants/secrets";
-import { useStores } from "../stores";
+import { Button, H2, XStack } from "tamagui";
 
 type HeaderProps = {
   name: keyof StackNavigatorParams;
 };
 
-GoogleSignin.configure({
-  webClientId,
-});
-
-async function onGoogleButtonPress(): Promise<FirebaseAuthTypes.UserCredential> {
-  // Get the users ID token
-  const { idToken } = await GoogleSignin.signIn();
-
-  // Create a Google credential with the token
-  const googleCredential = firebaseAuth.GoogleAuthProvider.credential(idToken);
-
-  // Sign-in the user with the credential
-  return await firebaseAuth().signInWithCredential(googleCredential);
-}
-
-export const Header: FC<HeaderProps> = observer(({ name }) => {
-  const { auth } = useStores();
-  const { navigate, canGoBack, goBack } =
+export const Header: FC<HeaderProps> = (({ name }) => {
+  const { canGoBack, goBack } =
     useNavigation<NavigationProp<StackNavigatorParams>>();
   const route = useRoute<RouteProp<StackNavigatorParams>>();
 
-  const goToUser = () => navigate("user-detail");
-  const signOut = async () => {
-    await GoogleSignin.signOut();
-    await firebaseAuth().signOut();
-    navigate("home");
-  };
-
-  const isUserScreen = route.name === "user-detail";
   const isHomeScreen = route.name === "home";
 
   return (
@@ -69,33 +39,6 @@ export const Header: FC<HeaderProps> = observer(({ name }) => {
           />
         ) : null}
         <H2 textTransform="capitalize">{name}</H2>
-      </XStack>
-      <XStack space="$1">
-        {auth.signedIn && auth.user && !isUserScreen ? (
-          <Avatar circular size="$5" onPress={goToUser}>
-            <Avatar.Image
-              defaultSource={0}
-              src={auth.user?.photoURL}
-            />
-            <Avatar.Fallback />
-          </Avatar>
-        ) : null}
-        {auth.signedIn && auth.user && isUserScreen ? (
-          <Button
-            chromeless
-            color="$red10"
-            icon={LogOut}
-            onPress={signOut}
-            p="$0"
-            pr="$2.5"
-            scaleIcon={1.5}
-          />
-        ) : null}
-        {!auth.signedIn ? (
-          <Button icon={LogIn} maw={150} onPress={onGoogleButtonPress}>
-            Sign In
-          </Button>
-        ) : null}
       </XStack>
     </XStack>
   );
