@@ -1,8 +1,6 @@
 {
-  "name": "tamagui-expo-firebase",
+  "name": "expo-tamagui-full",
   "version": "1.1.1",
-  "main": "index.js",
-  "private": true,
   "packageManager": "yarn@3.2.0",
   "scripts": {
     "wsl": "REACT_NATIVE_PACKAGER_HOSTNAME=$(netsh.exe interface ip show address \"Wi-Fi\" | grep 'IP Address' | sed -r 's/^.*IP Address:\\W*//') expo start",
@@ -72,6 +70,7 @@
     "@semantic-release/changelog": "^6.0.1",
     "@semantic-release/git": "^10.0.1",
     "@semantic-release/github": "^8.0.4",
+    "@semantic-release/npm": "^9.0.1",
     "@semantic-release/release-notes-generator": "^10.0.3",
     "@tamagui/babel-plugin": "1.0.1-beta.75",
     "@types/react": "~17.0.21",
