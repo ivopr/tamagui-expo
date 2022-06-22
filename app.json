@@ -1,6 +1,26 @@
 {
   "expo": {
     "name": "tamagui-expo-starter",
-    "slug": "tamagui-expo-starter"
+    "slug": "tamagui-expo-starter",
+    "assetBundlePatterns": ["**/*"],
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "backgroundColor": "#ddffe2",
+      "image": "./assets/splash.png",
+      "resizeMode": "contain"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "plugins": [
+      "@react-native-firebase/app",
+      "@react-native-firebase/crashlytics",
+      "@react-native-firebase/perf",
+      "@react-native-google-signin/google-signin",
+      "expo-dev-client",
+      "expo-splash-screen",
+      "dayjs"
+    ]
   }
 }
