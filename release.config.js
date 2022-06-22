@@ -1,7 +1,7 @@
 module.exports = {
   branches: ["minimal"],
   // eslint-disable-next-line prettier/prettier, no-useless-escape
-  tagFormat: "minimal - v\\\${version}",
+  tagFormat: "minimal - <%= version %>",
   plugins: [
     [
       "@semantic-release/commit-analyzer",
