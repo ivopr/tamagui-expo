@@ -7,6 +7,11 @@ Just run the following, changing `youprojectname` to the name of your project.
 ```
 expo init yourprojectname --template expo-tamagui-full
 ```
+
+Or a more clean project, with Tamagui only
+```
+expo init yourprojectname --template expo-tamagui-minimal
+```
 # Tamagui Expo Starter
 This is a starter template for [Expo](https://expo.dev) using [Tamagui](https://tamagui.dev).
 In this template you get out of the box:
