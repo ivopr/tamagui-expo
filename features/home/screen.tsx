@@ -8,7 +8,7 @@ export const HomeScreen: FC<
   NativeStackScreenProps<StackNavigatorParams, "home">
 > = ({ navigation }) => {
   return (
-    <YStack f={1} jc="center" ai="center" p="$4" space>
+    <YStack bc="$background" f={1} jc="center" ai="center" p="$4" space>
       <YStack space="$4" maw={600}>
         <H1 ta="center">Welcome to Tamagui.</H1>
         <Paragraph ta="center">

@@ -1,4 +1,4 @@
-import auth, { FirebaseAuthTypes } from "@react-native-firebase/auth";
+import firebaseAuth, { FirebaseAuthTypes } from "@react-native-firebase/auth";
 import { GoogleSignin } from "@react-native-google-signin/google-signin";
 import {
   NavigationProp,
@@ -6,7 +6,7 @@ import {
   useNavigation,
   useRoute,
 } from "@react-navigation/native";
-import { ArrowLeft, Lock } from "@tamagui/feather-icons";
+import { ArrowLeft, Lock, LogOut } from "@tamagui/feather-icons";
 import { observer } from "mobx-react";
 import { FC } from "react";
 import { Avatar, Button, H2, XStack } from "tamagui";
@@ -27,10 +27,10 @@ async function onGoogleButtonPress(): Promise<FirebaseAuthTypes.UserCredential> 
   const { idToken } = await GoogleSignin.signIn();
 
   // Create a Google credential with the token
-  const googleCredential = auth.GoogleAuthProvider.credential(idToken);
+  const googleCredential = firebaseAuth.GoogleAuthProvider.credential(idToken);
 
   // Sign-in the user with the credential
-  return await auth().signInWithCredential(googleCredential);
+  return await firebaseAuth().signInWithCredential(googleCredential);
 }
 
 export const Header: FC<HeaderProps> = observer(({ name }) => {
@@ -39,16 +39,23 @@ export const Header: FC<HeaderProps> = observer(({ name }) => {
     useNavigation<NavigationProp<StackNavigatorParams>>();
   const route = useRoute<RouteProp<StackNavigatorParams>>();
 
-  const goToUser = () =>
-    navigate("user-detail", {
-      id: auth.user.displayName,
-    });
+  const goToUser = () => navigate("user-detail");
+  const signOut = async () => {
+    await GoogleSignin.signOut();
+    await firebaseAuth().signOut();
+  };
 
   const isUserScreen = route.name === "user-detail";
   const isHomeScreen = route.name === "home";
 
   return (
-    <XStack ai="center" h="$6" jc="space-between" px="$2.5">
+    <XStack
+      ai="center"
+      bc="$backgroundSoft"
+      h="$6"
+      jc="space-between"
+      px="$2.5"
+    >
       <XStack space="$2">
         {!isHomeScreen && canGoBack() ? (
           <Button
@@ -73,6 +80,17 @@ export const Header: FC<HeaderProps> = observer(({ name }) => {
             />
             <Avatar.Fallback bc="$green10Light" />
           </Avatar>
+        ) : null}
+        {auth.signedIn && auth.user && isUserScreen ? (
+          <Button
+            chromeless
+            color="$red10"
+            icon={LogOut}
+            onPress={signOut}
+            p="$0"
+            pr="$2.5"
+            scaleIcon={1.5}
+          />
         ) : null}
         {!auth.signedIn ? (
           <Button icon={Lock} maw={150} onPress={onGoogleButtonPress}>
