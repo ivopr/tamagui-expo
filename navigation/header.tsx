@@ -1,6 +1,12 @@
 import auth, { FirebaseAuthTypes } from "@react-native-firebase/auth";
 import { GoogleSignin } from "@react-native-google-signin/google-signin";
-import { Lock } from "@tamagui/feather-icons";
+import {
+  NavigationProp,
+  RouteProp,
+  useNavigation,
+  useRoute,
+} from "@react-navigation/native";
+import { ArrowLeft, Lock } from "@tamagui/feather-icons";
 import { observer } from "mobx-react";
 import { FC } from "react";
 import { Avatar, Button, H2, XStack } from "tamagui";
@@ -29,24 +35,47 @@ async function onGoogleButtonPress(): Promise<FirebaseAuthTypes.UserCredential> 
 
 export const Header: FC<HeaderProps> = observer(({ name }) => {
   const { auth } = useStores();
+  const { navigate, canGoBack, goBack } =
+    useNavigation<NavigationProp<StackNavigatorParams>>();
+  const route = useRoute<RouteProp<StackNavigatorParams>>();
+
+  const goToUser = () =>
+    navigate("user-detail", {
+      id: auth.user.displayName,
+    });
+
+  const isUserScreen = route.name === "user-detail";
+  const isHomeScreen = route.name === "home";
 
   return (
-    <XStack
-      alignItems="center"
-      height="$6"
-      justifyContent="space-between"
-      paddingHorizontal="$2.5"
-    >
-      <H2 textTransform="capitalize">{name}</H2>
+    <XStack ai="center" h="$6" jc="space-between" px="$2.5">
+      <XStack space="$2">
+        {!isHomeScreen && canGoBack() ? (
+          <Button
+            chromeless
+            icon={ArrowLeft}
+            onPress={goBack}
+            p="$0"
+            pr="$2.5"
+            scaleIcon={1.75}
+          />
+        ) : null}
+        <H2 textTransform="capitalize">{name}</H2>
+      </XStack>
       <XStack space="$1">
-        {auth.signedIn && auth.user ? (
-          <Avatar circular size="$5">
-            <Avatar.Image defaultSource={0} src={auth.user?.photoURL} />
-            <Avatar.Fallback />
+        {auth.signedIn && auth.user && !isUserScreen ? (
+          <Avatar circular size="$5" onPress={goToUser}>
+            <Avatar.Image
+              h="100%"
+              w="100%"
+              defaultSource={0}
+              src={auth.user?.photoURL}
+            />
+            <Avatar.Fallback bc="$green10Light" />
           </Avatar>
         ) : null}
         {!auth.signedIn ? (
-          <Button icon={Lock} maxWidth={150} onPress={onGoogleButtonPress}>
+          <Button icon={Lock} maw={150} onPress={onGoogleButtonPress}>
             Sign In
           </Button>
         ) : null}

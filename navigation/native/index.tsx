@@ -42,20 +42,8 @@ export const NativeNavigation: FC = observer(() => {
         ),
       }}
     >
-      <Stack.Screen
-        name="home"
-        component={HomeScreen}
-        options={{
-          title: "Home",
-        }}
-      />
-      <Stack.Screen
-        name="user-detail"
-        component={UserDetailScreen}
-        options={{
-          title: "User",
-        }}
-      />
+      <Stack.Screen name="home" component={HomeScreen} />
+      <Stack.Screen name="user-detail" component={UserDetailScreen} />
     </Stack.Navigator>
   );
 });
