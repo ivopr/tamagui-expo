@@ -1,7 +1,12 @@
 <p align="center">
-  <img src="./assets/icons/icon.png" alt="Tamagui Icon"/>
+  <img src="https://github.com/ivopr/tamagui-expo/blob/main/assets/icons/icon.png" alt="Tamagui Icon"/>
 </p>
 
+# Quick Start
+Just run the following, changing `youprojectname` to the name of your project.
+```
+expo init yourprojectname --template expo-tamagui-full
+```
 # Tamagui Expo Starter
 This is a starter template for [Expo](https://expo.dev) using [Tamagui](https://tamagui.dev).
 In this template you get out of the box:
@@ -15,13 +20,6 @@ In this template you get out of the box:
 - Semantic Release already configured with everything you might want
 - EAS (Expo Application Services) profiles already configured
 - Different icons for different app types (Dev Client, Beta and Production)
-
-## Images
-<div style="display:flex;flex-direction:row;">
-<p align="center" style="max-height:400px">
-  <img src="./assets/images/notification.jpg" alt="Tamagui Icon"/>
-</p>
-</div>
 
 ## Before you run...
 1. You must have a [Firebase](https://console.firebase.google.com) project with Google Sign In Method, Real Time Database and Cloud Messaging ready.
