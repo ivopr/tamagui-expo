@@ -1,9 +1,8 @@
-name: Release 
+name: Minimal Release 
 
 on:
   push:
     branches:
-      - main
       - minimal
   workflow_dispatch:
 
