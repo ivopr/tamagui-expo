@@ -6,7 +6,7 @@ import {
   useNavigation,
   useRoute,
 } from "@react-navigation/native";
-import { ArrowLeft, Lock, LogOut } from "@tamagui/feather-icons";
+import { ArrowLeft, LogIn, LogOut } from "@tamagui/feather-icons";
 import { observer } from "mobx-react";
 import { FC } from "react";
 import { Avatar, Button, H2, XStack } from "tamagui";
@@ -43,6 +43,7 @@ export const Header: FC<HeaderProps> = observer(({ name }) => {
   const signOut = async () => {
     await GoogleSignin.signOut();
     await firebaseAuth().signOut();
+    navigate("home");
   };
 
   const isUserScreen = route.name === "user-detail";
@@ -73,12 +74,10 @@ export const Header: FC<HeaderProps> = observer(({ name }) => {
         {auth.signedIn && auth.user && !isUserScreen ? (
           <Avatar circular size="$5" onPress={goToUser}>
             <Avatar.Image
-              h="100%"
-              w="100%"
               defaultSource={0}
               src={auth.user?.photoURL}
             />
-            <Avatar.Fallback bc="$green10Light" />
+            <Avatar.Fallback />
           </Avatar>
         ) : null}
         {auth.signedIn && auth.user && isUserScreen ? (
@@ -93,7 +92,7 @@ export const Header: FC<HeaderProps> = observer(({ name }) => {
           />
         ) : null}
         {!auth.signedIn ? (
-          <Button icon={Lock} maw={150} onPress={onGoogleButtonPress}>
+          <Button icon={LogIn} maw={150} onPress={onGoogleButtonPress}>
             Sign In
           </Button>
         ) : null}

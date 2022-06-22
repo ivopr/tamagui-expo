@@ -27,6 +27,7 @@ export const ChangeTheme: FC = () => {
           elevate
           key="change-theme-content"
           space
+          // animation="quick"
           // animation={[
           //   "quick",
           //   {
@@ -75,7 +76,9 @@ const ColorSchemeListItem = observer(() => {
       <Spacer f={1} />
       <Button chromeless disabled icon={Moon} p="$0" pr="$2.5" />
       <Switch checked={checked}>
-        <Switch.Thumb />
+        <Switch.Thumb
+        // animation="bouncy"
+        />
       </Switch>
       <Button chromeless disabled icon={Sun} p="$0" pl="$2.5" />
     </ListItem>

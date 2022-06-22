@@ -12,11 +12,9 @@ export const UserDetails: FC = observer(() => {
       <Avatar circular size="$12">
         <Avatar.Image
           defaultSource={0}
-          h="100%"
           src={auth.user?.photoURL}
-          w="100%"
         />
-        <Avatar.Fallback bc="$green10Light" />
+        <Avatar.Fallback />
       </Avatar>
       <H4 textTransform="capitalize">{auth.user?.displayName}</H4>
     </YStack>
