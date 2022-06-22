@@ -90,7 +90,7 @@ module.exports = {
           "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}",
       },
     ],
-    "@semantic-release/github",
     "@semantic-release/npm",
+    "@semantic-release/github",
   ],
 };
