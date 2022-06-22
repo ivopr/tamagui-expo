@@ -8,7 +8,7 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
   scheme: "tamagui-firebase-mobx-template",
   name: IS_DEV ? "[DEV] TFMT" : IS_BETA ? "Tamagui Beta" : "Tamagui",
   slug: "tamaguifmt",
-  version: "1.1.0",
+  version: "1.1.1",
   orientation: "portrait",
   icon: IS_DEV
     ? "./assets/icons/icon-dev.png"
@@ -27,7 +27,7 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
   android: {
     package: IS_DEV ? "dev.tamagui.expo.devclient" : "dev.tamagui.expo.client",
     googleServicesFile: "google-services.json",
-    versionCode: 4,
+    versionCode: 5,
   },
   androidNavigationBar: {
     backgroundColor: "#ddffe2",
