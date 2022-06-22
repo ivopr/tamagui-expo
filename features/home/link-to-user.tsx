@@ -16,10 +16,7 @@ type LinkToUserProps = {
 export const LinkToUser: FC<LinkToUserProps> = observer(({ navigation }) => {
   const { auth } = useStores();
 
-  const goToUser = () =>
-    navigation.navigate("user-detail", {
-      id: auth.user.displayName,
-    });
+  const goToUser = () => navigation.navigate("user-detail");
 
   if (!auth.signedIn) {
     return null;

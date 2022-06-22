@@ -49,7 +49,13 @@ export const Header: FC<HeaderProps> = observer(({ name }) => {
   const isHomeScreen = route.name === "home";
 
   return (
-    <XStack ai="center" h="$6" jc="space-between" px="$2.5">
+    <XStack
+      ai="center"
+      bc="$backgroundSoft"
+      h="$6"
+      jc="space-between"
+      px="$2.5"
+    >
       <XStack space="$2">
         {!isHomeScreen && canGoBack() ? (
           <Button

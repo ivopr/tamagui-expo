@@ -7,6 +7,7 @@ import { FC, useEffect } from "react";
 
 import { NativeNavigation } from "./navigation/native";
 import { Provider } from "./provider";
+import { StoresProvider } from "./stores";
 
 const App: FC = () => {
   const [loaded] = useFonts({
@@ -28,7 +29,9 @@ const App: FC = () => {
 
   return (
     <Provider>
-      <NativeNavigation />
+      <StoresProvider>
+        <NativeNavigation />
+      </StoresProvider>
     </Provider>
   );
 };

@@ -1,9 +1,11 @@
-import { Zap } from "@tamagui/feather-icons";
+import { Moon, Sun, Zap } from "@tamagui/feather-icons";
 import { observer } from "mobx-react";
 import { FC } from "react";
-import { Button, Dialog, XStack } from "tamagui";
+import { Button, Dialog, ListItem, Spacer, Switch } from "tamagui";
 
-export const ChangeTheme: FC = observer(() => {
+import { useStores } from "../../stores";
+
+export const ChangeTheme: FC = () => {
   return (
     <Dialog>
       <Dialog.Trigger asChild>
@@ -11,7 +13,7 @@ export const ChangeTheme: FC = observer(() => {
           Change Theme
         </Button>
       </Dialog.Trigger>
-      <Dialog.Portal>
+      <Dialog.Portal p="$4">
         <Dialog.Overlay
           key="change-theme-overlay"
           animation="quick"
@@ -39,24 +41,43 @@ export const ChangeTheme: FC = observer(() => {
           scale={1}
           opacity={1}
           y={0}
+          w="100%"
         >
           <Dialog.Title>Change Theme</Dialog.Title>
           <Dialog.Description>Modify Tamagui Theme</Dialog.Description>
 
-          <XStack space="$1.5" w="100%">
-            <Dialog.Close asChild>
-              <Button theme="dark_green_alt3" aria-label="Close" w="45%">
-                Save Changes
-              </Button>
-            </Dialog.Close>
-            <Dialog.Close asChild>
-              <Button theme="dark_red_alt3" aria-label="Close" w="45%">
-                Cancel Changes
-              </Button>
-            </Dialog.Close>
-          </XStack>
+          <ColorSchemeListItem />
+
+          <Dialog.Close asChild>
+            <Button theme="dark_green_alt3" aria-label="Close">
+              Done
+            </Button>
+          </Dialog.Close>
         </Dialog.Content>
       </Dialog.Portal>
     </Dialog>
+  );
+};
+
+const ColorSchemeListItem = observer(() => {
+  const { ui } = useStores();
+  const checked = ui.appearance === "light";
+
+  return (
+    <ListItem
+      pressTheme
+      onPress={() => {
+        ui.setAppearanceMode(ui.appearance === "light" ? "dark" : "light");
+      }}
+      w="100%"
+    >
+      <ListItem.Text>Theme</ListItem.Text>
+      <Spacer f={1} />
+      <Button chromeless disabled icon={Moon} p="$0" pr="$2.5" />
+      <Switch checked={checked}>
+        <Switch.Thumb />
+      </Switch>
+      <Button chromeless disabled icon={Sun} p="$0" pl="$2.5" />
+    </ListItem>
   );
 });
