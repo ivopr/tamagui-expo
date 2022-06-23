@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "tamagui-expo-starter",
-    "slug": "tamagui-expo-starter",
+    "name": "TET",
+    "slug": "TET",
     "assetBundlePatterns": ["**/*"],
     "orientation": "portrait",
     "userInterfaceStyle": "light",

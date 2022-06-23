@@ -9,8 +9,8 @@ import { UserDetails } from "./user-details";
 
 export const UserDetailScreen: FC<
   NativeStackScreenProps<StackNavigatorParams, "user-detail">
-> = ({route}) => {
-  const {id} = route.params;
+> = ({ route }) => {
+  const { id } = route.params;
 
   return (
     <YStack bc="$background" f={1} p="$4" space>

@@ -2,7 +2,7 @@ import { Settings as SettingsIcon } from "@tamagui/feather-icons";
 import { FC } from "react";
 import { Button, Dialog } from "tamagui";
 
-export const Settings: FC = (() => {
+export const Settings: FC = () => {
   return (
     <Dialog>
       <Dialog.Trigger asChild>
@@ -52,4 +52,4 @@ export const Settings: FC = (() => {
       </Dialog.Portal>
     </Dialog>
   );
-});
+};

@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "packageManager": "yarn@3.2.0",
   "scripts": {
-    "wsl": "REACT_NATIVE_PACKAGER_HOSTNAME=$(netsh.exe interface ip show address \"Wi-Fi\" | grep 'IP Address' | sed -r 's/^.*IP Address:\\W*//') expo start",
+    "wsl": "REACT_NATIVE_PACKAGER_HOSTNAME=$(netsh.exe interface ip show address \"Wi-Fi\" | grep 'IP Address' | sed -r 's/^.*IP Address:\\W*//') TAMAGUI_TARGET=native expo start",
     "start": "expo start",
     "android": "yarn expo run:android",
     "ios": "yarn expo run:ios",
@@ -13,10 +13,8 @@
   },
   "resolutions": {
     "@types/react": "17.0.21",
-    "cacache": "16.0.7",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "react-refresh": "0.11.0",
     "react-native-web": "^0.18"
   },
   "dependencies": {

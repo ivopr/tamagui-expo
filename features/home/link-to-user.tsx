@@ -10,15 +10,15 @@ type LinkToUserProps = {
   >;
 };
 
-export const LinkToUser: FC<LinkToUserProps> = (({ navigation }) => {
-
-  const goToUser = () => navigation.navigate("user-detail", {
-    id: "John Doe"
-  });
+export const LinkToUser: FC<LinkToUserProps> = ({ navigation }) => {
+  const goToUser = () =>
+    navigation.navigate("user-detail", {
+      id: "John Doe",
+    });
 
   return (
     <Button themeInverse onPress={goToUser}>
       Link to user
     </Button>
   );
-});
+};
