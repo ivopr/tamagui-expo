@@ -1,8 +1,8 @@
 import { Moon, Sun, Zap } from "@tamagui/feather-icons";
 import { FC } from "react";
 import { Button, Dialog, ListItem, Spacer, Switch } from "tamagui";
-import { useThemeControl } from "../../provider/useTheme";
 
+import { useThemeControl } from "../../provider/useTheme";
 
 export const ChangeTheme: FC = () => {
   return (
@@ -59,7 +59,7 @@ export const ChangeTheme: FC = () => {
   );
 };
 
-const ColorSchemeListItem = (() => {
+const ColorSchemeListItem = () => {
   const theme = useThemeControl();
 
   const checked = theme.value === "light";
@@ -83,4 +83,4 @@ const ColorSchemeListItem = (() => {
       <Button chromeless disabled icon={Sun} p="$0" pl="$2.5" />
     </ListItem>
   );
-});
+};

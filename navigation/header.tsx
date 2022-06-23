@@ -12,7 +12,7 @@ type HeaderProps = {
   name: keyof StackNavigatorParams;
 };
 
-export const Header: FC<HeaderProps> = (({ name }) => {
+export const Header: FC<HeaderProps> = ({ name }) => {
   const { canGoBack, goBack } =
     useNavigation<NavigationProp<StackNavigatorParams>>();
   const route = useRoute<RouteProp<StackNavigatorParams>>();
@@ -22,7 +22,7 @@ export const Header: FC<HeaderProps> = (({ name }) => {
   return (
     <XStack
       ai="center"
-      bc="$backgroundSoft"
+      bc="$backgroundStrong"
       h="$6"
       jc="space-between"
       px="$2.5"
@@ -42,4 +42,4 @@ export const Header: FC<HeaderProps> = (({ name }) => {
       </XStack>
     </XStack>
   );
-});
+};
