@@ -14,7 +14,6 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
     : "./assets/icons/icon.png",
   android: {
     package: IS_DEV ? "dev.tamagui.expo.devclient" : "dev.tamagui.expo.client",
-    googleServicesFile: "google-services.json",
     versionCode: 9,
   },
 });
