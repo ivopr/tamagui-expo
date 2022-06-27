@@ -1,5 +1,6 @@
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { FC } from "react";
+import { useTranslation } from "react-i18next";
 import { Button } from "tamagui";
 
 type LinkToUserProps = {
@@ -11,6 +12,8 @@ type LinkToUserProps = {
 };
 
 export const LinkToUser: FC<LinkToUserProps> = ({ navigation }) => {
+  const { t } = useTranslation("home");
+
   const goToUser = () =>
     navigation.navigate("user-detail", {
       id: "John Doe",
@@ -18,7 +21,7 @@ export const LinkToUser: FC<LinkToUserProps> = ({ navigation }) => {
 
   return (
     <Button themeInverse onPress={goToUser}>
-      Link to user
+      {t("link-to-user")}
     </Button>
   );
 };

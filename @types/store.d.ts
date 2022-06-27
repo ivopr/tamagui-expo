@@ -4,4 +4,4 @@ interface IStore {
 type Stores = Record<string, IStore>;
 
 type AppearanceMode = "light" | "dark";
-type Language = "en" | "pt";
+type Language = "en" | "br";

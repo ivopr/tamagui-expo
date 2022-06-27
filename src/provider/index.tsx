@@ -1,13 +1,16 @@
 import { FC } from "react";
 import { TamaguiProviderProps } from "tamagui";
 
-import Tamagui from "../tamagui.config";
+import { StoresProvider } from "../stores";
 import { NavigationProvider } from "./navigation";
+import { TamaguiProvider } from "./tamagui";
 
 export const Provider: FC<TamaguiProviderProps> = ({ children, ...rest }) => {
   return (
-    <Tamagui.Provider defaultTheme="light" {...rest}>
-      <NavigationProvider>{children}</NavigationProvider>
-    </Tamagui.Provider>
+    <StoresProvider>
+      <TamaguiProvider>
+        <NavigationProvider>{children}</NavigationProvider>
+      </TamaguiProvider>
+    </StoresProvider>
   );
 };
