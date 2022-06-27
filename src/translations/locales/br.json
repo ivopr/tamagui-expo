@@ -1,0 +1,26 @@
+{
+  "common": {
+    "done": "Feito"
+  },
+  "home": {
+    "link-to-user": "Ir para usuário",
+    "welcome": "Bem-vindo(a) ao Tamagui.",
+    "message": "Esse é um exemplo bem básico de como ir de uma página para outra",
+    "made-by": "Tamagui é feito por Nate Wienert.\nEsse exemplo é feito por Ivo Vieira.\nSeria bem legal você dar uma forcinha nos nossos repos."
+  },
+  "locales": {
+    "br": "Portugues Brasileiro",
+    "en": "Inglês"
+  },
+  "user": {
+    "account": "Conta",
+    "change-theme": "Alterar Tema",
+    "data-del": "Requisitar Exclusão de Dados",
+    "edit": "Editar Meu Perfil",
+    "invite": "Convidar um Amigo",
+    "misc": "Miscelânea",
+    "settings": "Configurações",
+    "settings-desc": "Isso pode ser útil...",
+    "theme": "Tema"
+  }
+}

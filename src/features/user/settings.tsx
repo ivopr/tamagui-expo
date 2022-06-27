@@ -1,13 +1,19 @@
 import { Settings as SettingsIcon } from "@tamagui/feather-icons";
 import { FC } from "react";
+import { useTranslation } from "react-i18next";
 import { Button, Dialog } from "tamagui";
 
+import { useStores } from "../../stores";
+
 export const Settings: FC = () => {
+  const { ui } = useStores();
+  const { t, i18n } = useTranslation(["user", "locales", "common"]);
+
   return (
     <Dialog>
       <Dialog.Trigger asChild>
         <Button icon={SettingsIcon} themeInverse>
-          Settings
+          {t("user:settings")}
         </Button>
       </Dialog.Trigger>
       <Dialog.Portal p="$4">
@@ -40,12 +46,32 @@ export const Settings: FC = () => {
           y={0}
           w="100%"
         >
-          <Dialog.Title>Settings</Dialog.Title>
-          <Dialog.Description>Some useful things for you</Dialog.Description>
+          <Dialog.Title>{t("user:settings")}</Dialog.Title>
+          <Dialog.Description>{t("user:settings-desc")}</Dialog.Description>
+
+          <Button
+            onPress={() => {
+              i18n.changeLanguage("br");
+              ui.setLanguage("br");
+            }}
+            themeInverse
+          >
+            {t("locales:br")}
+          </Button>
+
+          <Button
+            onPress={() => {
+              i18n.changeLanguage("en");
+              ui.setLanguage("en");
+            }}
+            themeInverse
+          >
+            {t("locales:en")}
+          </Button>
 
           <Dialog.Close asChild>
             <Button themeInverse aria-label="Close">
-              Done
+              {t("common:done")}
             </Button>
           </Dialog.Close>
         </Dialog.Content>

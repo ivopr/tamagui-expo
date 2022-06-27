@@ -1,15 +1,19 @@
 import { Moon, Sun, Zap } from "@tamagui/feather-icons";
+import { observer } from "mobx-react";
 import { FC } from "react";
+import { useTranslation } from "react-i18next";
 import { Button, Dialog, ListItem, Spacer, Switch } from "tamagui";
 
-import { useThemeControl } from "../../provider/useTheme";
+import { useStores } from "../../stores";
 
 export const ChangeTheme: FC = () => {
+  const { t } = useTranslation(["user", "common"]);
+
   return (
     <Dialog>
       <Dialog.Trigger asChild>
         <Button icon={Zap} themeInverse>
-          Change Theme
+          {t("user:change-theme")}
         </Button>
       </Dialog.Trigger>
       <Dialog.Portal p="$4">
@@ -43,14 +47,13 @@ export const ChangeTheme: FC = () => {
           y={0}
           w="100%"
         >
-          <Dialog.Title>Change Theme</Dialog.Title>
-          <Dialog.Description>Modify Tamagui Theme</Dialog.Description>
+          <Dialog.Title>{t("user:change-theme")}</Dialog.Title>
 
           <ColorSchemeListItem />
 
           <Dialog.Close asChild>
             <Button theme="dark_green_alt3" aria-label="Close">
-              Done
+              {t("common:done")}
             </Button>
           </Dialog.Close>
         </Dialog.Content>
@@ -59,20 +62,21 @@ export const ChangeTheme: FC = () => {
   );
 };
 
-const ColorSchemeListItem = () => {
-  const theme = useThemeControl();
+const ColorSchemeListItem = observer(() => {
+  const { t } = useTranslation(["user"]);
+  const { ui } = useStores();
 
-  const checked = theme.value === "light";
+  const checked = ui.appearance === "light";
 
   return (
     <ListItem
       pressTheme
       onPress={() => {
-        theme.set(theme.value === "light" ? "dark" : "light");
+        ui.setAppearanceMode(ui.appearance === "light" ? "dark" : "light");
       }}
       w="100%"
     >
-      <ListItem.Text>Theme</ListItem.Text>
+      <ListItem.Text>{t("user:theme")}</ListItem.Text>
       <Spacer f={1} />
       <Button chromeless disabled icon={Moon} p="$0" pr="$2.5" />
       <Switch checked={checked}>
@@ -83,4 +87,4 @@ const ColorSchemeListItem = () => {
       <Button chromeless disabled icon={Sun} p="$0" pl="$2.5" />
     </ListItem>
   );
-};
+});
