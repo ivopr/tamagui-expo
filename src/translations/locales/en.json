@@ -22,5 +22,9 @@
     "settings": "Settings",
     "settings-desc": "Some useful things for you",
     "theme": "Theme"
+  },
+  "titles": {
+    "home": "Home",
+    "user-detail": "User"
   }
 }

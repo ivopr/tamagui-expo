@@ -15,17 +15,18 @@
     "@types/react": "17.0.21",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "react-native-web": "^0.18"
+    "react-native-web": "^0.18",
+    "react-native-reanimated": "~2.8.0"
   },
   "dependencies": {
     "@babel/runtime": "^7.17.9",
     "@react-navigation/native": "^6.0.10",
     "@react-navigation/native-stack": "^6.6.2",
-    "@tamagui/animations-reanimated": "^1.0.1-beta.78",
-    "@tamagui/feather-icons": "^1.0.1-beta.78",
-    "@tamagui/font-inter": "^1.0.1-beta.78",
-    "@tamagui/shorthands": "^1.0.1-beta.78",
-    "@tamagui/theme-base": "^1.0.1-beta.78",
+    "@tamagui/animations-reanimated": "^1.0.1-beta.95",
+    "@tamagui/feather-icons": "^1.0.1-beta.95",
+    "@tamagui/font-inter": "^1.0.1-beta.95",
+    "@tamagui/shorthands": "^1.0.1-beta.95",
+    "@tamagui/theme-base": "^1.0.1-beta.95",
     "expo": "~45.0.3",
     "expo-dev-client": "~1.0.0",
     "expo-font": "~10.1.0",
@@ -42,12 +43,11 @@
     "react-native-gesture-handler": "~2.2.0",
     "react-native-mmkv": "^2.4.1",
     "react-native-reanimated": "~2.8.0",
-    "react-native-restart": "^0.0.24",
     "react-native-safe-area-context": "^4.2.5",
     "react-native-screens": "~3.11.1",
     "react-native-svg": "12.3.0",
     "react-native-web": "^0.18",
-    "tamagui": "^1.0.1-beta.78"
+    "tamagui": "^1.0.1-beta.95"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
@@ -58,7 +58,7 @@
     "@semantic-release/github": "^8.0.4",
     "@semantic-release/npm": "^9.0.1",
     "@semantic-release/release-notes-generator": "^10.0.3",
-    "@tamagui/babel-plugin": "1.0.1-beta.78",
+    "@tamagui/babel-plugin": "1.0.1-beta.95",
     "@types/i18n-js": "^3.8.2",
     "@types/react": "~17.0.21",
     "@types/react-native": "~0.67.6",

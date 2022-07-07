@@ -22,5 +22,9 @@
     "settings": "Configurações",
     "settings-desc": "Isso pode ser útil...",
     "theme": "Tema"
+  },
+  "titles": {
+    "home": "Inicio",
+    "user-detail": "Usuário"
   }
 }

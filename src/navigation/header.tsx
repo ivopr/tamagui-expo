@@ -6,6 +6,7 @@ import {
 } from "@react-navigation/native";
 import { ArrowLeft } from "@tamagui/feather-icons";
 import { FC } from "react";
+import { useTranslation } from "react-i18next";
 import { Button, H2, XStack } from "tamagui";
 
 type HeaderProps = {
@@ -16,7 +17,7 @@ export const Header: FC<HeaderProps> = ({ name }) => {
   const { canGoBack, goBack } =
     useNavigation<NavigationProp<StackNavigatorParams>>();
   const route = useRoute<RouteProp<StackNavigatorParams>>();
-
+  const { t } = useTranslation(["titles"]);
   const isHomeScreen = route.name === "home";
 
   return (
@@ -38,7 +39,7 @@ export const Header: FC<HeaderProps> = ({ name }) => {
             scaleIcon={1.75}
           />
         ) : null}
-        <H2 textTransform="capitalize">{name}</H2>
+        <H2 textTransform="capitalize">{t(`titles:${name}`)}</H2>
       </XStack>
     </XStack>
   );
