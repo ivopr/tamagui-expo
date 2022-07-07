@@ -18,7 +18,7 @@ In this template you get out of the box:
 - Different icons for different app types (Dev Client, Beta and Production)
 
 ## Before you run...
-1. Build the dev client with `eas -p android --profile development`
+1. Build the dev client with `eas build -p android --profile development`
 1. If you're in WSL, use the `yarn wsl` command, else `yarn start` is your default choice. Don't forget to add `--dev-client` to it.
 
 ## Troubleshooting
