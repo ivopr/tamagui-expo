@@ -10,9 +10,9 @@ expo init yourprojectname --template tamagui-expo-template
 # Tamagui Expo Starter
 This is a starter template for [Expo](https://expo.dev) using [Tamagui](https://tamagui.dev).
 In this template you get out of the box:
-- I18n (WIP)
-- Light and Dark Themes
-- Expo Dev Client ready
+- I18n
+- MobX and MobX Persist Store already configured
+- Light and Dark Themes with persistence
 - Semantic Release already configured with everything you might want
 - EAS (Expo Application Services) profiles already configured
 - Different icons for different app types (Dev Client, Beta and Production)
