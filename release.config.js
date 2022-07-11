@@ -6,12 +6,12 @@ module.exports = {
       {
         preset: "angular",
         releaseRules: [
-          { type: "docs", release: false },
           { type: "feat", release: "minor" },
           { type: "fix", release: "patch" },
-          { type: "chore", release: "patch" },
-          { type: "refactor", release: "patch" },
+          { type: "ref", release: "patch" },
+          { type: "chore", release: false },
           { type: "ci", release: false },
+          { type: "docs", release: false },
         ],
       },
     ],
@@ -37,7 +37,7 @@ module.exports = {
               hidden: false,
             },
             {
-              type: "refactor",
+              type: "ref",
               section: ":zap: Refactorings",
               hidden: false,
             },
