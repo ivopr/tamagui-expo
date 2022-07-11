@@ -1,7 +1,7 @@
 import { Settings as SettingsIcon } from "@tamagui/feather-icons";
 import { FC } from "react";
 import { useTranslation } from "react-i18next";
-import { Button, Dialog } from "tamagui";
+import { Button, Dialog, YStack } from "tamagui";
 
 import { useStores } from "../../stores";
 
@@ -10,13 +10,14 @@ export const Settings: FC = () => {
   const { t, i18n } = useTranslation(["user", "locales", "common"]);
 
   return (
-    <Dialog>
+    <Dialog modal>
       <Dialog.Trigger asChild>
         <Button icon={SettingsIcon} themeInverse>
           {t("user:settings")}
         </Button>
       </Dialog.Trigger>
-      <Dialog.Portal p="$4">
+
+      <Dialog.Portal p="$2">
         <Dialog.Overlay
           key="settings-overlay"
           animation="quick"
@@ -30,6 +31,7 @@ export const Settings: FC = () => {
           elevate
           key="settings-content"
           space
+          animation="quick"
           // animation={[
           //   "quick",
           //   {
@@ -49,28 +51,30 @@ export const Settings: FC = () => {
           <Dialog.Title>{t("user:settings")}</Dialog.Title>
           <Dialog.Description>{t("user:settings-desc")}</Dialog.Description>
 
-          <Button
-            onPress={() => {
-              i18n.changeLanguage("br");
-              ui.setLanguage("br");
-            }}
-            themeInverse
-          >
-            {t("locales:br")}
-          </Button>
+          <YStack>
+            <Button
+              onPress={() => {
+                i18n.changeLanguage("br");
+                ui.setLanguage("br");
+              }}
+              themeInverse
+            >
+              {t("locales:br")}
+            </Button>
 
-          <Button
-            onPress={() => {
-              i18n.changeLanguage("en");
-              ui.setLanguage("en");
-            }}
-            themeInverse
-          >
-            {t("locales:en")}
-          </Button>
+            <Button
+              onPress={() => {
+                i18n.changeLanguage("en");
+                ui.setLanguage("en");
+              }}
+              themeInverse
+            >
+              {t("locales:en")}
+            </Button>
+          </YStack>
 
           <Dialog.Close asChild>
-            <Button themeInverse aria-label="Close">
+            <Button theme="dark_green_alt3" aria-label="Close">
               {t("common:done")}
             </Button>
           </Dialog.Close>

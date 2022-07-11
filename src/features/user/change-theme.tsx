@@ -16,7 +16,7 @@ export const ChangeTheme: FC = () => {
           {t("user:change-theme")}
         </Button>
       </Dialog.Trigger>
-      <Dialog.Portal p="$4">
+      <Dialog.Portal p="$2">
         <Dialog.Overlay
           key="change-theme-overlay"
           animation="quick"
@@ -30,7 +30,7 @@ export const ChangeTheme: FC = () => {
           elevate
           key="change-theme-content"
           space
-          // animation="quick"
+          animation="quick"
           // animation={[
           //   "quick",
           //   {
