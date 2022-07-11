@@ -3,17 +3,43 @@
     "version": ">= 0.52.0"
   },
   "build": {
+    "betaAPK": {
+      "android": {
+        "buildType": "apk"
+      },
+      "developmentClient": false,
+      "env": {
+        "APP_VARIANT": "beta"
+      },
+      "releaseChannel": "beta"
+    },
+    "betaAAB": {
+      "android": {
+        "buildType": "app-bundle"
+      },
+      "developmentClient": false,
+      "env": {
+        "APP_VARIANT": "beta"
+      },
+      "releaseChannel": "beta"
+    },
     "development": {
-      "developmentClient": true,
+      "android": {
+        "buildType": "apk"
+      },
       "distribution": "internal",
+      "developmentClient": true,
       "env": {
         "APP_VARIANT": "development"
-      }
+      },
+      "releaseChannel": "development"
     },
-    "preview": {
-      "distribution": "internal"
-    },
-    "production": {}
+    "production": {
+      "android": {
+        "buildType": "app-bundle"
+      },
+      "releaseChannel": "production"
+    }
   },
   "submit": {
     "production": {}
