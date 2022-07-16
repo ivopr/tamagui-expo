@@ -1,7 +1,7 @@
 import { Settings as SettingsIcon } from "@tamagui/feather-icons";
 import { FC } from "react";
 import { useTranslation } from "react-i18next";
-import { Button, Dialog, YStack } from "tamagui";
+import { Button, Dialog, Group, Separator } from "tamagui";
 
 import { useStores } from "../../stores";
 
@@ -10,12 +10,23 @@ export const Settings: FC = () => {
   const { t, i18n } = useTranslation(["user", "locales", "common"]);
 
   return (
-    <Dialog modal>
+    <Dialog
+      modal
+      // sheetBreakpoint="$sm"
+    >
       <Dialog.Trigger asChild>
         <Button icon={SettingsIcon} themeInverse>
           {t("user:settings")}
         </Button>
       </Dialog.Trigger>
+
+      {/* <Dialog.Sheet modal>
+        <Dialog.Sheet.Handle />
+        <Dialog.Sheet.Frame>
+          <Dialog.SheetContents />
+        </Dialog.Sheet.Frame>
+        <Dialog.Sheet.Overlay />
+      </Dialog.Sheet> */}
 
       <Dialog.Portal p="$2">
         <Dialog.Overlay
@@ -31,15 +42,14 @@ export const Settings: FC = () => {
           elevate
           key="settings-content"
           space
-          animation="quick"
-          // animation={[
-          //   "quick",
-          //   {
-          //     opacity: {
-          //       overshootClamping: true,
-          //     },
-          //   },
-          // ]}
+          animation={[
+            "quick",
+            {
+              opacity: {
+                overshootClamping: true,
+              },
+            },
+          ]}
           enterStyle={{ x: 0, y: -20, opacity: 0, scale: 0.9 }}
           exitStyle={{ x: 0, y: 10, opacity: 0, scale: 0.95 }}
           x={0}
@@ -51,7 +61,7 @@ export const Settings: FC = () => {
           <Dialog.Title>{t("user:settings")}</Dialog.Title>
           <Dialog.Description>{t("user:settings-desc")}</Dialog.Description>
 
-          <YStack>
+          <Group vertical separator={<Separator />}>
             <Button
               onPress={() => {
                 i18n.changeLanguage("br");
@@ -71,7 +81,7 @@ export const Settings: FC = () => {
             >
               {t("locales:en")}
             </Button>
-          </YStack>
+          </Group>
 
           <Dialog.Close asChild>
             <Button theme="dark_green_alt3" aria-label="Close">

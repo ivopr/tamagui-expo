@@ -1,24 +1,47 @@
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
-import { Edit3, Mail, Trash2 } from "@tamagui/feather-icons";
+import { Edit3, Mail, Moon, Sun, Trash2 } from "@tamagui/feather-icons";
+import { observer } from "mobx-react";
 import { FC } from "react";
 import { useTranslation } from "react-i18next";
-import { Button, H5, YStack } from "tamagui";
+import { Button, Group, H5, ListItem, Spacer, Switch, YStack } from "tamagui";
 
-import { ChangeTheme } from "./change-theme";
+import { useStores } from "../../stores";
 import { Settings } from "./settings";
 import { UserDetails } from "./user-details";
 
 export const UserDetailScreen: FC<
   NativeStackScreenProps<StackNavigatorParams, "user-detail">
-> = ({ route }) => {
+> = observer(({ route }) => {
+  const { ui } = useStores();
   const { t } = useTranslation(["user"]);
   const { id } = route.params;
 
   return (
-    <YStack bc="$background" f={1} p="$4" space>
+    <YStack bc="$backgroundStrong" f={1} p="$4" space>
       <UserDetails id={id} />
-      <YStack space="$1" w="100%">
-        <H5>{t("user:account")}</H5>
+
+      <Group vertical>
+        <ListItem
+          pressTheme
+          onPress={() => {
+            ui.setAppearanceMode(ui.appearance === "light" ? "dark" : "light");
+          }}
+          w="100%"
+        >
+          <ListItem.Text>{t("user:theme")}</ListItem.Text>
+          <Spacer f={1} />
+          <Button chromeless disabled w={20} icon={Moon} />
+          <Switch ai="center" checked={ui.appearance === "light"} themeShallow>
+            <Switch.Thumb
+              size="$3.5"
+              // animation="quick"
+            />
+          </Switch>
+          <Button chromeless disabled w={20} icon={Sun} />
+        </ListItem>
+      </Group>
+      <H5>{t("user:account")}</H5>
+      <Group vertical>
         <Button icon={Edit3} themeInverse>
           {t("user:edit")}
         </Button>
@@ -28,12 +51,11 @@ export const UserDetailScreen: FC<
         <Button icon={Trash2} theme="dark_red_alt3">
           {t("user:data-del")}
         </Button>
-      </YStack>
-      <YStack space="$1" w="100%">
-        <H5>{t("user:misc")}</H5>
+      </Group>
+      <H5>{t("user:misc")}</H5>
+      <Group vertical>
         <Settings />
-        <ChangeTheme />
-      </YStack>
+      </Group>
     </YStack>
   );
-};
+});

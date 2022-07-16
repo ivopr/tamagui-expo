@@ -12,7 +12,7 @@ export const HomeScreen: FC<
   const { t } = useTranslation(["home"]);
 
   return (
-    <YStack bc="$background" f={1} jc="center" ai="center" p="$4" space>
+    <YStack bc="$backgroundStrong" f={1} jc="center" ai="center" p="$4" space>
       <YStack space="$4" maw={600}>
         <H1 ta="center">{t("home:welcome")}</H1>
         <H5 ta="center">{t("home:message")}</H5>
