@@ -20,7 +20,7 @@ export const Settings: FC = () => {
         </Button>
       </Dialog.Trigger>
 
-      {/* <Dialog.Sheet modal>
+      {/* <Dialog.Sheet dismissOnOverlayPress dismissOnSnapToBottom modal>
         <Dialog.Sheet.Handle />
         <Dialog.Sheet.Frame>
           <Dialog.SheetContents />
