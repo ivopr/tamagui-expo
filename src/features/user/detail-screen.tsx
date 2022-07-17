@@ -32,10 +32,7 @@ export const UserDetailScreen: FC<
           <Spacer f={1} />
           <Button chromeless disabled w={20} icon={Moon} />
           <Switch ai="center" checked={ui.appearance === "light"} themeShallow>
-            <Switch.Thumb
-              size="$3.5"
-              // animation="quick"
-            />
+            <Switch.Thumb animation="quick" />
           </Switch>
           <Button chromeless disabled w={20} icon={Sun} />
         </ListItem>
