@@ -2,7 +2,7 @@ import { NativeStackScreenProps } from "@react-navigation/native-stack";
 import { Github, Twitter } from "@tamagui/feather-icons";
 import { FC } from "react";
 import { useTranslation } from "react-i18next";
-import { Anchor, Button, H1, H5, Separator, YStack } from "tamagui";
+import { Anchor, Button, H1, H5, ListItem, Separator, YGroup, YStack } from "tamagui";
 
 import { LinkToUser } from "./link-to-user";
 
@@ -22,27 +22,31 @@ export const HomeScreen: FC<
 
       <LinkToUser navigation={navigation} />
 
-      <YStack ai="center" mt="$2.5" space="$2.5">
-        <Anchor asChild href="https://twitter.com/natebirdman" target="_blank">
-          <Button icon={Twitter}>Nate</Button>
-        </Anchor>
-        <Anchor
-          asChild
-          href="https://github.com/tamagui/tamagui"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <Button icon={Github}>Tamagui</Button>
-        </Anchor>
-        <Anchor
-          asChild
-          href="https://github.com/ivopr/tamagui-expo"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <Button icon={Github}>Template</Button>
-        </Anchor>
-      </YStack>
+      <YGroup w="100%">
+        <ListItem icon={Twitter}>
+          <Anchor href="https://twitter.com/natebirdman" target="_blank">
+            Nate
+          </Anchor>
+        </ListItem>
+        <ListItem icon={Github}>
+          <Anchor
+            href="https://github.com/tamagui/tamagui"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Tamagui
+          </Anchor>
+        </ListItem>
+        <ListItem icon={Github}>
+          <Anchor
+            href="https://github.com/ivopr/tamagui-expo"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Template
+          </Anchor>
+        </ListItem>
+      </YGroup>
     </YStack>
   );
 };

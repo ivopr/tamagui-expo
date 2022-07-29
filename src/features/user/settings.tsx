@@ -1,7 +1,7 @@
 import { Settings as SettingsIcon } from "@tamagui/feather-icons";
 import { FC } from "react";
 import { useTranslation } from "react-i18next";
-import { Button, Dialog, Group, Separator } from "tamagui";
+import { Button, Dialog, ListItem, Separator, YGroup } from "tamagui";
 
 import { useStores } from "../../stores";
 
@@ -20,7 +20,7 @@ export const Settings: FC = () => {
         </Button>
       </Dialog.Trigger>
 
-      {/* <Dialog.Sheet dismissOnOverlayPress dismissOnSnapToBottom modal>
+      {/* <Dialog.Sheet modal>
         <Dialog.Sheet.Handle />
         <Dialog.Sheet.Frame>
           <Dialog.SheetContents />
@@ -61,27 +61,29 @@ export const Settings: FC = () => {
           <Dialog.Title>{t("user:settings")}</Dialog.Title>
           <Dialog.Description>{t("user:settings-desc")}</Dialog.Description>
 
-          <Group vertical separator={<Separator />}>
-            <Button
+          <YGroup>
+            <ListItem
+              backgroundColor="$backgroundStrong"
+              pressTheme
               onPress={() => {
                 i18n.changeLanguage("br");
                 ui.setLanguage("br");
               }}
-              themeInverse
             >
               {t("locales:br")}
-            </Button>
+            </ListItem>
 
-            <Button
+            <ListItem
+              backgroundColor="$backgroundStrong"
               onPress={() => {
                 i18n.changeLanguage("en");
                 ui.setLanguage("en");
               }}
-              themeInverse
+              pressTheme
             >
               {t("locales:en")}
-            </Button>
-          </Group>
+            </ListItem>
+          </YGroup>
 
           <Dialog.Close asChild>
             <Button theme="dark_green_alt3" aria-label="Close">

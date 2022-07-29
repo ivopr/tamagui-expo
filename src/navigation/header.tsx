@@ -35,7 +35,7 @@ export const Header: FC<HeaderProps> = ({ name }) => {
             icon={ArrowLeft}
             onPress={goBack}
             p="$0"
-            pr="$2.5"
+            px="$2.5"
             scaleIcon={1.75}
           />
         ) : null}
