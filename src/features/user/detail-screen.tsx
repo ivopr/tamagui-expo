@@ -3,7 +3,7 @@ import { Edit3, Mail, Moon, Sun, Trash2 } from "@tamagui/feather-icons";
 import { observer } from "mobx-react";
 import { FC } from "react";
 import { useTranslation } from "react-i18next";
-import { Button, H5, ListItem, Spacer, Switch, YGroup, YStack } from "tamagui";
+import { Button, H5, ListItem, Spacer, YGroup, YStack } from "tamagui";
 
 import { useStores } from "../../stores";
 import { Settings } from "./settings";
@@ -30,7 +30,12 @@ export const UserDetailScreen: FC<
         >
           <ListItem.Text>{t("user:theme")}</ListItem.Text>
           <Spacer f={1} />
-          <Button chromeless disabled w={20} icon={ui.appearance === "light" ? Sun : Moon} />
+          <Button
+            chromeless
+            disabled
+            w={20}
+            icon={ui.appearance === "light" ? Sun : Moon}
+          />
         </ListItem>
       </YGroup>
       <H5>{t("user:account")}</H5>

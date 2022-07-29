@@ -1,7 +1,7 @@
 import { Settings as SettingsIcon } from "@tamagui/feather-icons";
 import { FC } from "react";
 import { useTranslation } from "react-i18next";
-import { Button, Dialog, ListItem, Separator, YGroup } from "tamagui";
+import { Button, Dialog, ListItem, YGroup } from "tamagui";
 
 import { useStores } from "../../stores";
 
