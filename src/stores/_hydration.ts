@@ -1,8 +1,13 @@
 import { configurePersistable } from "mobx-persist-store";
 import { MMKV } from "react-native-mmkv";
+import { initializeMMKVFlipper } from "react-native-mmkv-flipper-plugin";
 
 // MMKV configuration
 const storage = new MMKV();
+
+if (__DEV__) {
+  initializeMMKVFlipper({ default: storage });
+}
 
 configurePersistable({
   // debugMode: __DEV__,
