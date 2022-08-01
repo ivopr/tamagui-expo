@@ -1712,7 +1712,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/runtime@npm:^7.0.0, @babel/runtime@npm:^7.15.5, @babel/runtime@npm:^7.18.6":
+"@babel/runtime@npm:^7.0.0, @babel/runtime@npm:^7.18.6":
   version: 7.18.9
   resolution: "@babel/runtime@npm:7.18.9"
   dependencies:
@@ -3471,20 +3471,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tamagui/animations-react-native@npm:^1.0.1-beta.133":
-  version: 1.0.1-beta.133
-  resolution: "@tamagui/animations-react-native@npm:1.0.1-beta.133"
-  dependencies:
-    "@tamagui/animate-presence": ^1.0.1-beta.133
-    "@tamagui/core": ^1.0.1-beta.133
-  peerDependencies:
-    react: "*"
-    react-dom: "*"
-    react-native: "*"
-  checksum: 75ffeac11dc2b4e96d5d77b2dcc343be8a54ed9e01006563a1fdfc67d3cbd9856de894bc4413e514aa1d0634addd2841f9431ad956b7da38920904d75d92d131
-  languageName: node
-  linkType: hard
-
 "@tamagui/animations-reanimated@npm:^1.0.1-beta.133":
   version: 1.0.1-beta.133
   resolution: "@tamagui/animations-reanimated@npm:1.0.1-beta.133"
@@ -3596,21 +3582,6 @@ __metadata:
   peerDependencies:
     react: "*"
   checksum: 79732dddada86d61baf2bc16ff2a24c84dfa450e312bff547a01189fe9ad055eb16cbf0f77da32a2e836eb0f32530ab24c91256f5481cbe4ca6f3ad1c83b6b0c
-  languageName: node
-  linkType: hard
-
-"@tamagui/config-base@npm:^1.0.1-beta.133":
-  version: 1.0.1-beta.133
-  resolution: "@tamagui/config-base@npm:1.0.1-beta.133"
-  dependencies:
-    "@tamagui/animations-react-native": ^1.0.1-beta.133
-    "@tamagui/colors": ^1.0.1-beta.133
-    "@tamagui/core": ^1.0.1-beta.133
-    "@tamagui/font-inter": ^1.0.1-beta.133
-    "@tamagui/font-silkscreen": ^1.0.1-beta.133
-    "@tamagui/shorthands": ^1.0.1-beta.133
-    "@tamagui/theme-base": ^1.0.1-beta.133
-  checksum: cdabfec05a7806ab9130e159ba39ace842bce140df5e49c193a2eb3958c7e6b88df89952ca64cf361b64aa9c0316a8a4f2c60ab9f28630cb469ffc3d5516cdbb
   languageName: node
   linkType: hard
 
@@ -7830,7 +7801,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"expo@npm:next":
+"expo@npm:^46":
   version: 46.0.2
   resolution: "expo@npm:46.0.2"
   dependencies:
@@ -13029,7 +13000,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-dom@npm:*, react-dom@npm:18.2.0":
+"react-devtools-core@npm:^4.25.0":
+  version: 4.25.0
+  resolution: "react-devtools-core@npm:4.25.0"
+  dependencies:
+    shell-quote: ^1.6.1
+    ws: ^7
+  checksum: 68dae4507c46b875936904f2aba0fe1dda1d7b6fb616ac72e438aec29d7c49aeadaaff264cc148d40795075fdb9c736d1dcf5c50dbe40eaae64c7aa24f313e68
+  languageName: node
+  linkType: hard
+
+"react-dom@npm:*, react-dom@npm:^18.2.0":
   version: 18.2.0
   resolution: "react-dom@npm:18.2.0"
   dependencies:
@@ -13102,6 +13083,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-native-flipper@npm:^0.156.0":
+  version: 0.156.0
+  resolution: "react-native-flipper@npm:0.156.0"
+  peerDependencies:
+    react: ^16.8.0 || ^17.0.0
+    react-native: ">0.62.0"
+  checksum: a1b1d298ac33fc1382b892ca88f4680dd531341d17b6ce140065523c60c04540689c6de80dd9da2a2bae74ddf7b32d1641deed03b2128d240bccd945c4ba68b2
+  languageName: node
+  linkType: hard
+
 "react-native-gesture-handler@npm:~2.5.0":
   version: 2.5.0
   resolution: "react-native-gesture-handler@npm:2.5.0"
@@ -13122,6 +13113,16 @@ __metadata:
   version: 0.0.7
   resolution: "react-native-gradle-plugin@npm:0.0.7"
   checksum: 959ce3bcbc8362909210fae894e4b414a0afdff39fe1683463214b7feddae6beaf8584ebe62323b1e91ba31de00311e826588e0d807c93a949e445b1770cac27
+  languageName: node
+  linkType: hard
+
+"react-native-mmkv-flipper-plugin@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "react-native-mmkv-flipper-plugin@npm:1.0.0"
+  peerDependencies:
+    react-native-flipper: ">=0.99.0"
+    react-native-mmkv: ">=1.4.0"
+  checksum: aebd430a8831809de76e61e92ae4e5435dd47d81896859fdaee78db6603b2f2fab0919992705eb2fe26942172921f9f7374cedca1df1edeabdf2e284337d614d
   languageName: node
   linkType: hard
 
@@ -13209,7 +13210,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-native@npm:0.69.3":
+"react-native@npm:^0.69.3":
   version: 0.69.3
   resolution: "react-native@npm:0.69.3"
   dependencies:
@@ -13325,7 +13326,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react@npm:*, react@npm:18.2.0":
+"react@npm:*, react@npm:^18.2.0":
   version: 18.2.0
   resolution: "react@npm:18.2.0"
   dependencies:
@@ -14888,7 +14889,6 @@ __metadata:
   resolution: "tamagui-expo-template@workspace:."
   dependencies:
     "@babel/core": ^7.18.6
-    "@babel/runtime": ^7.15.5
     "@google/semantic-release-replace-plugin": ^1.1.0
     "@manypkg/cli": ^0.19.1
     "@react-navigation/native": ^6.0.10
@@ -14900,11 +14900,9 @@ __metadata:
     "@semantic-release/release-notes-generator": ^10.0.3
     "@tamagui/animations-reanimated": ^1.0.1-beta.133
     "@tamagui/babel-plugin": 1.0.1-beta.133
-    "@tamagui/config-base": ^1.0.1-beta.133
     "@tamagui/feather-icons": ^1.0.1-beta.133
     "@tamagui/font-inter": ^1.0.1-beta.133
     "@tamagui/font-silkscreen": ^1.0.1-beta.133
-    "@tamagui/sheet": ^1.0.1-beta.133
     "@tamagui/shorthands": ^1.0.1-beta.133
     "@tamagui/theme-base": ^1.0.1-beta.133
     "@types/i18n-js": ^3.8.2
@@ -14915,7 +14913,7 @@ __metadata:
     eslint: ^8.11.0
     eslint-config-universe: ^10.0.0
     eslint-plugin-simple-import-sort: ^7.0.0
-    expo: next
+    expo: ^46
     expo-dev-client: ~1.1.1
     expo-font: ~10.2.0
     expo-linear-gradient: ~11.4.0
@@ -14925,12 +14923,15 @@ __metadata:
     mobx-persist-store: ^1.0.6
     mobx-react: ^7.5.0
     prettier: ^2.7.1
-    react: 18.2.0
-    react-dom: 18.2.0
+    react: ^18.2.0
+    react-devtools-core: ^4.25.0
+    react-dom: ^18.2.0
     react-i18next: ^11.17.3
-    react-native: 0.69.3
+    react-native: ^0.69.3
+    react-native-flipper: ^0.156.0
     react-native-gesture-handler: ~2.5.0
     react-native-mmkv: ^2.4.3
+    react-native-mmkv-flipper-plugin: ^1.0.0
     react-native-reanimated: ~2.9.1
     react-native-safe-area-context: 4.3.1
     react-native-screens: ~3.15.0
