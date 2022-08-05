@@ -6,7 +6,7 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
   ...config,
   name: IS_DEV ? `[DEV] ${config.name}` : config.name,
   slug: config.slug,
-  version: "1.4.0",
+  version: "1.4.1",
   icon: IS_DEV
     ? "./assets/icons/icon-dev.png"
     : IS_BETA
@@ -14,6 +14,6 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
     : "./assets/icons/icon.png",
   android: {
     package: IS_DEV ? "dev.tamagui.expo.devclient" : "dev.tamagui.expo.client",
-    versionCode: 20,
+    versionCode: 21,
   },
 });
