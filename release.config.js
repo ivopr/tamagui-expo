@@ -9,6 +9,7 @@ module.exports = {
           { type: "feat", release: "minor" },
           { type: "fix", release: "patch" },
           { type: "ref", release: "patch" },
+          { type: "dep", release: "patch" },
           { type: "chore", release: false },
           { type: "ci", release: false },
           { type: "docs", release: false },
@@ -38,7 +39,12 @@ module.exports = {
             },
             {
               type: "ref",
-              section: ":zap: Refactorings",
+              section: ":zap: Refactorings and Dependency Changes",
+              hidden: false,
+            },
+            {
+              type: "dep",
+              section: ":zap: Refactorings and Dependency Changes",
               hidden: false,
             },
             {
