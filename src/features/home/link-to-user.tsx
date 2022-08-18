@@ -20,7 +20,7 @@ export const LinkToUser: FC<LinkToUserProps> = ({ navigation }) => {
     });
 
   return (
-    <Button themeInverse onPress={goToUser} w="100%">
+    <Button onPress={goToUser} w="100%">
       {t("link-to-user")}
     </Button>
   );

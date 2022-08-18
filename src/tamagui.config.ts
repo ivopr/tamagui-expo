@@ -42,7 +42,7 @@ const bodyFont = createInterFont(
   }
 );
 
-const config = createTamagui({
+export const config = createTamagui({
   animations,
   defaultTheme: "light",
   shouldAddPrefersColorThemes: true,
@@ -72,10 +72,10 @@ const config = createTamagui({
   },
 });
 
-export type Conf = typeof config;
+export default config;
+
+type Conf = typeof config;
 
 declare module "tamagui" {
   interface TamaguiCustomConfig extends Conf {}
 }
-
-export default config;

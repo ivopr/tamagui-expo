@@ -1,6 +1,6 @@
 import { NavigationContainer } from "@react-navigation/native";
-import { FC } from "react";
+import { FC, PropsWithChildren } from "react";
 
-export const NavigationProvider: FC = ({ children }) => {
+export const NavigationProvider: FC<PropsWithChildren> = ({ children }) => {
   return <NavigationContainer>{children}</NavigationContainer>;
 };

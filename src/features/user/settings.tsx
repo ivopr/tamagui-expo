@@ -10,23 +10,10 @@ export const Settings: FC = () => {
   const { t, i18n } = useTranslation(["user", "locales", "common"]);
 
   return (
-    <Dialog
-      modal
-      // sheetBreakpoint="$sm"
-    >
+    <Dialog modal>
       <Dialog.Trigger asChild>
-        <Button icon={SettingsIcon} themeInverse>
-          {t("user:settings")}
-        </Button>
+        <Button icon={SettingsIcon}>{t("user:settings")}</Button>
       </Dialog.Trigger>
-
-      {/* <Dialog.Sheet modal>
-        <Dialog.Sheet.Handle />
-        <Dialog.Sheet.Frame>
-          <Dialog.SheetContents />
-        </Dialog.Sheet.Frame>
-        <Dialog.Sheet.Overlay />
-      </Dialog.Sheet> */}
 
       <Dialog.Portal p="$2">
         <Dialog.Overlay

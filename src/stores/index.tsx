@@ -1,6 +1,6 @@
 import "./_hydration";
 
-import React from "react";
+import React, { PropsWithChildren } from "react";
 
 import { CounterStore } from "./counter";
 import { UIStore } from "./ui";
@@ -12,7 +12,7 @@ export const stores = {
 type ContextStores = typeof stores;
 
 const storeContext = React.createContext<ContextStores>(stores);
-export const StoresProvider: React.FC = ({ children }) => (
+export const StoresProvider: React.FC<PropsWithChildren> = ({ children }) => (
   <storeContext.Provider value={stores}>{children}</storeContext.Provider>
 );
 
