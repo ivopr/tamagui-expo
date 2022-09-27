@@ -1,23 +1,16 @@
+// debug
 import "expo-dev-client";
-import "./translations";
 
 import { useFonts } from "expo-font";
 import { FC } from "react";
-import { connectToDevTools } from "react-devtools-core";
 
-import { NativeNavigation } from "./navigation/native";
+import { NativeNavigation } from "./navigation";
 import { Provider } from "./provider";
-
-if (__DEV__) {
-  connectToDevTools({
-    host: "localhost",
-    port: 8097,
-  });
-}
 
 const App: FC = () => {
   const [loaded] = useFonts({
-    Inter: require("@tamagui/font-inter/ttf/Inter.ttf"),
+    Inter: require("@tamagui/font-inter/otf/Inter-Medium.otf"),
+    InterBold: require("@tamagui/font-inter/otf/Inter-Bold.otf"),
   });
 
   if (!loaded) {

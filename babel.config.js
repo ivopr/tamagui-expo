@@ -5,22 +5,25 @@ module.exports = function (api) {
   return {
     presets: [["babel-preset-expo", { jsxRuntime: "automatic" }]],
     plugins: [
-      [
-        "@tamagui/babel-plugin",
-        {
-          components: ["tamagui"],
-          config: "./src/tamagui.config.ts",
-          logTimings: true,
-          disableExtraction: process.env.NODE_ENV === "development",
-        },
-      ],
+      // if you want reanimated support
+      // 'react-native-reanimated/plugin',
+      ...(process.env.EAS_BUILD_PLATFORM === "android"
+        ? []
+        : [
+            [
+              "@tamagui/babel-plugin",
+              {
+                components: ["tamagui"],
+                config: "./src/tamagui.config.ts",
+              },
+            ],
+          ]),
       [
         "transform-inline-environment-variables",
         {
           include: "TAMAGUI_TARGET",
         },
       ],
-      "react-native-reanimated/plugin",
     ],
   };
 };

@@ -7,7 +7,7 @@ type UserDetailProps = {
 
 export const UserDetails: FC<UserDetailProps> = ({ id }) => {
   return (
-    <YStack ai="center" space="$1">
+    <YStack alignItems="center" space="$1">
       <H4 textTransform="capitalize">{id}</H4>
     </YStack>
   );

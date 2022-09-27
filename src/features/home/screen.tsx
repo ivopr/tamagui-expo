@@ -1,7 +1,6 @@
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
 import { Github, Twitter } from "@tamagui/feather-icons";
 import { FC } from "react";
-import { useTranslation } from "react-i18next";
 import { Anchor, H1, H5, ListItem, Separator, YGroup, YStack } from "tamagui";
 
 import { LinkToUser } from "./link-to-user";
@@ -9,20 +8,21 @@ import { LinkToUser } from "./link-to-user";
 export const HomeScreen: FC<
   NativeStackScreenProps<StackNavigatorParams, "home">
 > = ({ navigation }) => {
-  const { t } = useTranslation(["home"]);
 
   return (
-    <YStack bc="$backgroundStrong" f={1} jc="center" ai="center" p="$4" space>
-      <YStack space="$4" maw={600}>
-        <H1 ta="center">{t("home:welcome")}</H1>
-        <H5 ta="center">{t("home:message")}</H5>
+    <YStack backgroundColor="$backgroundStrong" flex={1} justifyContent="center" alignItems="center" padding="$4" space>
+      <YStack space="$4" maxWidth={600}>
+        <H1 textAlign="center">Welcome to Tamagui.</H1>
+        <H5 textAlign="center">Here's a basic starter to show navigating from one screen to another.</H5>
         <Separator />
-        <H5 ta="center">{t("home:made-by")}</H5>
+        <H5 textAlign="center">Tamagui is made by Nate Wienert.</H5>
+        <H5 textAlign="center">This template was made by Ivo Vieira.</H5>
+        <H5 textAlign="center">You should probably star our repos.</H5>
       </YStack>
 
       <LinkToUser navigation={navigation} />
 
-      <YGroup w="100%">
+      <YGroup width="100%">
         <ListItem icon={Twitter}>
           <Anchor href="https://twitter.com/natebirdman" target="_blank">
             Nate

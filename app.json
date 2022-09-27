@@ -23,8 +23,7 @@
       "barStyle": "dark-content"
     },
     "plugins": [
-      "expo-dev-client",
-      "expo-splash-screen"
+      "expo-dev-client"
     ]
   }
 }

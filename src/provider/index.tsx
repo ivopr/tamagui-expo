@@ -1,16 +1,14 @@
-import { FC } from "react";
-import { TamaguiProviderProps } from "tamagui";
+import { NavigationContainer } from "@react-navigation/native";
+import { Suspense } from "react";
+import { TamaguiProvider } from "tamagui";
+import { config } from "../tamagui.config";
 
-import { StoresProvider } from "../stores";
-import { NavigationProvider } from "./navigation";
-import { TamaguiProvider } from "./tamagui";
-
-export const Provider: FC<TamaguiProviderProps> = ({ children, ...rest }) => {
+export const Provider: FCC = ({ children }) => {
   return (
-    <StoresProvider>
-      <TamaguiProvider>
-        <NavigationProvider>{children}</NavigationProvider>
+      <TamaguiProvider config={config}>
+        <Suspense>
+          <NavigationContainer>{children}</NavigationContainer>
+        </Suspense>
       </TamaguiProvider>
-    </StoresProvider>
   );
 };
