@@ -6,6 +6,7 @@ module.exports = {
       {
         preset: "angular",
         releaseRules: [
+          { type: "BREAKING CHANGE", release: "major" },
           { type: "feat", release: "minor" },
           { type: "fix", release: "patch" },
           { type: "ref", release: "patch" },
@@ -22,6 +23,11 @@ module.exports = {
         preset: "conventionalcommits",
         presetConfig: {
           types: [
+            {
+              type: "BREAKING CHANGE",
+              section: ":boom: BREAKING CHANGE",
+              hidden: false,
+            },
             {
               type: "feat",
               section: ":sparkles: Features",

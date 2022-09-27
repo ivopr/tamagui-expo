@@ -2152,7 +2152,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@expo/code-signing-certificates@npm:^0.0.2":
+"@expo/code-signing-certificates@npm:0.0.2, @expo/code-signing-certificates@npm:^0.0.2":
   version: 0.0.2
   resolution: "@expo/code-signing-certificates@npm:0.0.2"
   dependencies:
@@ -2185,10 +2185,40 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@expo/config-plugins@npm:~5.0.1":
+  version: 5.0.1
+  resolution: "@expo/config-plugins@npm:5.0.1"
+  dependencies:
+    "@expo/config-types": ^46.0.0
+    "@expo/json-file": 8.2.36
+    "@expo/plist": 0.0.18
+    "@expo/sdk-runtime-versions": ^1.0.0
+    "@react-native/normalize-color": ^2.0.0
+    chalk: ^4.1.2
+    debug: ^4.3.1
+    find-up: ~5.0.0
+    getenv: ^1.0.0
+    glob: 7.1.6
+    resolve-from: ^5.0.0
+    semver: ^7.3.5
+    slash: ^3.0.0
+    xcode: ^3.0.1
+    xml2js: 0.4.23
+  checksum: bd7139ba8728e7117aaa1ae056190ed69bfde707286d13ef2fe26201381753e6d2066a223eb69547825ab1469c253a75f2e73fad82021b2a7589bb98fd8bf8bb
+  languageName: node
+  linkType: hard
+
 "@expo/config-types@npm:^46.0.0":
   version: 46.0.1
   resolution: "@expo/config-types@npm:46.0.1"
   checksum: 2f5b1b03d4636893f406fb934ef76e9ed0b71161bc27f2c53e94223525655111b60ed83e803065f666cca88d2d11e38f604b5513efd641805a9bde4a852b06cb
+  languageName: node
+  linkType: hard
+
+"@expo/config-types@npm:^46.0.1":
+  version: 46.0.2
+  resolution: "@expo/config-types@npm:46.0.2"
+  checksum: ea7b3c64e875dfe65209e5f099b3ef4ddc464f308aff50ba08c26c1dfc3d3c177203190b29b5d7dd334932d74f765690c44829d637d7a71a72078214c69a07ab
   languageName: node
   linkType: hard
 
@@ -2208,6 +2238,25 @@ __metadata:
     slugify: ^1.3.4
     sucrase: ^3.20.0
   checksum: e061decfc47b8bf144c54b34f788c244f2befa31604c9370eeae281d8e64a22cedf30f5d10d33be612ddc711a0c86cd6c25c14da068c51e50c3f2dd0bd8e4e49
+  languageName: node
+  linkType: hard
+
+"@expo/config@npm:7.0.1, @expo/config@npm:~7.0.1":
+  version: 7.0.1
+  resolution: "@expo/config@npm:7.0.1"
+  dependencies:
+    "@babel/code-frame": ~7.10.4
+    "@expo/config-plugins": ~5.0.1
+    "@expo/config-types": ^46.0.1
+    "@expo/json-file": 8.2.36
+    getenv: ^1.0.0
+    glob: 7.1.6
+    require-from-string: ^2.0.2
+    resolve-from: ^5.0.0
+    semver: 7.3.2
+    slugify: ^1.3.4
+    sucrase: ^3.20.0
+  checksum: 151bae8703af6cf0e41b3cbb8ab0ce3597be58d38242b7e831fa4b3622e7822ad2ff8549482c1cad1ffaf69dd4b2e972ca6dfc37020001d2b9ffc5d5587bbd70
   languageName: node
   linkType: hard
 
@@ -2308,6 +2357,22 @@ __metadata:
     resolve-from: ^5.0.0
     sucrase: ^3.20.0
   checksum: e6f9177aa6858487dc1c993fecc449ee5a12e0a99f70b1cf3fda609f5c92700a418ee2e228831a6d543643fed324c70ce3e3ad72b8f35e63bd767d18750ea764
+  languageName: node
+  linkType: hard
+
+"@expo/metro-config@npm:~0.4.0":
+  version: 0.4.0
+  resolution: "@expo/metro-config@npm:0.4.0"
+  dependencies:
+    "@expo/config": 7.0.1
+    "@expo/json-file": 8.2.36
+    chalk: ^4.1.0
+    debug: ^4.3.2
+    find-yarn-workspace-root: ~2.0.0
+    getenv: ^1.0.0
+    resolve-from: ^5.0.0
+    sucrase: ^3.20.0
+  checksum: 8f571dd36c9eafed15ff709183eaa18bd5b92c1f9a5f367e245913c862d1fd6084812351d34260ed293c967a83bc230774d6e148f1947c495a0fd5b815e75aba
   languageName: node
   linkType: hard
 
@@ -8002,6 +8067,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"expo-eas-client@npm:~0.3.0":
+  version: 0.3.0
+  resolution: "expo-eas-client@npm:0.3.0"
+  checksum: 76f2794f839287ee5d5c5db303001c9619d912d53fe76dd7a6e5f39a5ea20934be705ef2ea152517a26062ff0536cb5f767722713ec8243b76db1467235a12c9
+  languageName: node
+  linkType: hard
+
 "expo-error-recovery@npm:~3.2.0":
   version: 3.2.0
   resolution: "expo-error-recovery@npm:3.2.0"
@@ -8104,12 +8176,43 @@ __metadata:
   languageName: node
   linkType: hard
 
+"expo-structured-headers@npm:~2.2.0":
+  version: 2.2.1
+  resolution: "expo-structured-headers@npm:2.2.1"
+  checksum: 633efd60c8f8a32ef3e5a3aecf73be1d83d19fc48e302b6cca7a40a9b268704f4e4c0c901d13987e3ad4ae1b435e178432760b858f07aa86f8d590e2d380323b
+  languageName: node
+  linkType: hard
+
 "expo-updates-interface@npm:~0.7.0":
   version: 0.7.0
   resolution: "expo-updates-interface@npm:0.7.0"
   peerDependencies:
     expo: "*"
   checksum: 21cbe3c9554a7e88b5c4977ec46f5c9731e44be0df3d4fac4c36178c23153813b06070252ff1d93c4f58bf618ce9f300b25b6aebc08b5fbfc96fd718e99472d1
+  languageName: node
+  linkType: hard
+
+"expo-updates@npm:^0.14.6":
+  version: 0.14.6
+  resolution: "expo-updates@npm:0.14.6"
+  dependencies:
+    "@expo/code-signing-certificates": 0.0.2
+    "@expo/config": ~7.0.1
+    "@expo/config-plugins": ~5.0.1
+    "@expo/metro-config": ~0.4.0
+    arg: 4.1.0
+    expo-eas-client: ~0.3.0
+    expo-manifests: ~0.3.0
+    expo-structured-headers: ~2.2.0
+    expo-updates-interface: ~0.7.0
+    fbemitter: ^3.0.0
+    resolve-from: ^5.0.0
+    uuid: ^3.4.0
+  peerDependencies:
+    expo: "*"
+  bin:
+    expo-updates: bin/cli.js
+  checksum: ee6e7e30785e9d5b53236b8097e1380adc2efcfd465458ffbeaa5c4d81dc7dd02c327cb5d107cfb6a7db5a91a2e89f87ee755b556ac668151b7635fd43649e69
   languageName: node
   linkType: hard
 
@@ -15121,6 +15224,7 @@ __metadata:
     expo-dev-client: ~1.2.1
     expo-font: ~10.2.0
     expo-linear-gradient: ~11.4.0
+    expo-updates: ^0.14.6
     prettier: ^2.7.1
     react: 18.2.0
     react-dom: 18.2.0
