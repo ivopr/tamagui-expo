@@ -2,9 +2,9 @@
   <img src="https://github.com/ivopr/tamagui-expo/blob/main/assets/icons/icon.png" alt="Tamagui Icon"/>
 </p>
 
-[![runs with Expo Go](https://img.shields.io/badge/Runs%20with%20Expo%20Go-000.svg?style=flat-square&logo=EXPO&labelColor=f3f3f3&logoColor=000)](https://expo.dev/client)
+[<img src="https://img.shields.io/badge/Runs%20with%20Expo%20Go-000.svg?style=flat-square&logo=EXPO&labelColor=f3f3f3&logoColor=000" alt="Runs on Expo Go"/>](https://expo.dev/client)
 
-[![open in Expo Go](https://img.shields.io/badge/Open%20in%20Expo%20Go-4630EB.svg?style=flat-square&logo=EXPO&labelColor=f3f3f3&logoColor=000)](exp://exp.host/@ivopr/TET?release-channel=default)
+[<img src="https://img.shields.io/badge/Open%20in%20Expo%20Go-4630EB.svg?style=flat-square&logo=EXPO&labelColor=f3f3f3&logoColor=000" alt="Open in Expo Go"/>](https://expo.dev/%40ivopr/TET?serviceType=classic&distribution=expo-go&releaseChannel=default)
 
 # Quick Start
 Just run the following, changing `youprojectname` to the name of your project.
