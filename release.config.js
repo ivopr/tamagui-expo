@@ -6,7 +6,7 @@ module.exports = {
       {
         preset: "angular",
         releaseRules: [
-          { type: "BREAKING CHANGE", release: "major" },
+          { type: "BREAKING", release: "major" },
           { type: "feat", release: "minor" },
           { type: "fix", release: "patch" },
           { type: "ref", release: "patch" },
@@ -24,7 +24,7 @@ module.exports = {
         presetConfig: {
           types: [
             {
-              type: "BREAKING CHANGE",
+              type: "BREAKING",
               section: ":boom: BREAKING CHANGE",
               hidden: false,
             },
