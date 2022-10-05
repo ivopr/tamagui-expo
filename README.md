@@ -21,9 +21,9 @@ In this template you get out of the box:
 - EAS (Expo Application Services) profiles already configured
 - Different icons for different app types (Dev Client, Beta and Production)
 
-## Before you run...
-1. Build the dev client with `eas build -p android --profile development`
-1. If you're in WSL, use the `yarn wsl` command, else `yarn start` is your default choice. Don't forget to add `--dev-client` to it.
+## If you want to...
+1. You can build your own dev client with `eas build -p android --profile development`
+1. Develop in WSL, use the `yarn wsl` command, else `yarn start` is your default choice.
 
 ## Troubleshooting
 ### I'm on WSL but my app doesn't connect
