@@ -9,7 +9,9 @@
 # Quick Start
 Just run the following, changing `youprojectname` to the name of your project.
 ```
-expo init yourprojectname --template tamagui-expo-template
+npx create-expo-app youprojectname -t tamagui-expo-template --no-install
+cd yourappname
+yarn install
 ```
 If you have [Expo Go](https://expo.dev/client) app installed, just start your new app with `yarn start`, if not, create your own [Development Client](https://docs.expo.dev/development/build/)
 # Tamagui Expo Starter
