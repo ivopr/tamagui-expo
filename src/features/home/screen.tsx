@@ -8,12 +8,20 @@ import { LinkToUser } from "./link-to-user";
 export const HomeScreen: FC<
   NativeStackScreenProps<StackNavigatorParams, "home">
 > = ({ navigation }) => {
-
   return (
-    <YStack backgroundColor="$backgroundStrong" flex={1} justifyContent="center" alignItems="center" padding="$4" space>
+    <YStack
+      backgroundColor="$backgroundStrong"
+      flex={1}
+      justifyContent="center"
+      alignItems="center"
+      padding="$4"
+      space
+    >
       <YStack space="$4" maxWidth={600}>
         <H1 textAlign="center">Welcome to Tamagui.</H1>
-        <H5 textAlign="center">Here's a basic starter to show navigating from one screen to another.</H5>
+        <H5 textAlign="center">
+          Here's a basic starter to show navigating from one screen to another.
+        </H5>
         <Separator />
         <H5 textAlign="center">Tamagui is made by Nate Wienert.</H5>
         <H5 textAlign="center">This template was made by Ivo Vieira.</H5>

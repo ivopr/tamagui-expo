@@ -1,4 +1,3 @@
-// debug
 import "expo-dev-client";
 
 import { useFonts } from "expo-font";
