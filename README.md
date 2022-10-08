@@ -1,19 +1,26 @@
+# Tamagui Expo Template
+###### This is a community template
+
 <p align="center">
   <img src="https://github.com/ivopr/tamagui-expo/blob/main/assets/icons/icon.png" alt="Tamagui Icon"/>
 </p>
 
-<div style="display:flex;flex-direction:row;justify-content:center">
-  <a target="_blank" href="https://expo.dev/client" style="margin-right:2.5px">
-    <img src="https://img.shields.io/badge/Runs%20with%20Expo%20Go-000.svg?style=flat-square&logo=EXPO&labelColor=f3f3f3&logoColor=000" alt="Runs on Expo Go"/>
-  </a>
+<table align="center">
+  <tr>
+    <td valign="top">
+      <a target="_blank" href="https://expo.dev/client">
+        <img src="https://img.shields.io/badge/Runs%20with%20Expo%20Go-000.svg?style=flat-square&logo=EXPO&labelColor=f3f3f3&logoColor=000" alt="Runs on Expo Go"/>
+      </a>
+    </td>
+    <td valign="top">
+      <a target="_blank" href="https://expo.dev/%40ivopr/TET?serviceType=classic&distribution=expo-go&releaseChannel=default">
+          <img src="https://img.shields.io/badge/Open%20in%20Expo%20Go-4630EB.svg?style=flat-square&logo=EXPO&labelColor=f3f3f3&logoColor=000" alt="Open in Expo Go"/>
+        </a>
+    </td>
+  </tr>
+</table>
 
-  <a target="_blank" href="https://expo.dev/%40ivopr/TET?serviceType=classic&distribution=expo-go&releaseChannel=default" style="margin-left:2.5px">
-    <img src="https://img.shields.io/badge/Open%20in%20Expo%20Go-4630EB.svg?style=flat-square&logo=EXPO&labelColor=f3f3f3&logoColor=000" alt="Open in Expo Go"/>
-  </a>
-</div>
-
-
-# Quick Start
+## Quick Start
 Just run the following, changing `youprojectname` to the name of your project.
 ```
 npx create-expo-app youprojectname -t tamagui-expo-template --no-install
@@ -21,7 +28,8 @@ cd yourappname
 yarn install
 ```
 If you have [Expo Go](https://expo.dev/client) app installed, just start your new app with `yarn start`, if not, create your own [Development Client](https://docs.expo.dev/development/build/)
-# What you get
+
+## What you get
 This is a starter template for [Expo](https://expo.dev) using [Tamagui](https://tamagui.dev).
 In this template you get out of the box:
 - Semantic Release already configured with everything you might want
