@@ -14,12 +14,12 @@
   "dependencies": {
     "@react-navigation/native": "^6.0.10",
     "@react-navigation/native-stack": "^6.6.2",
-    "@tamagui/animations-reanimated": "^1.0.1-beta.191",
-    "@tamagui/config-base": "^1.0.1-beta.191",
-    "@tamagui/feather-icons": "^1.0.1-beta.191",
-    "@tamagui/font-inter": "^1.0.1-beta.190",
-    "@tamagui/shorthands": "^1.0.1-beta.191",
-    "@tamagui/theme-base": "^1.0.1-beta.191",
+    "@tamagui/animations-reanimated": "^1.0.1-beta.195",
+    "@tamagui/config-base": "^1.0.1-beta.195",
+    "@tamagui/feather-icons": "^1.0.1-beta.193",
+    "@tamagui/font-inter": "^1.0.1-beta.195",
+    "@tamagui/shorthands": "^1.0.1-beta.195",
+    "@tamagui/theme-base": "^1.0.1-beta.195",
     "expo": "^46",
     "expo-dev-client": "~1.2.1",
     "expo-font": "~10.2.0",
@@ -34,7 +34,7 @@
     "react-native-screens": "~3.15.0",
     "react-native-svg": "12.3.0",
     "react-native-web": "~0.18.7",
-    "tamagui": "^1.0.1-beta.191"
+    "tamagui": "^1.0.1-beta.195"
   },
   "devDependencies": {
     "@babel/core": "^7.18.6",
@@ -45,7 +45,7 @@
     "@semantic-release/github": "^8.0.4",
     "@semantic-release/npm": "^9.0.1",
     "@semantic-release/release-notes-generator": "^10.0.3",
-    "@tamagui/babel-plugin": "1.0.1-beta.191",
+    "@tamagui/babel-plugin": "1.0.1-beta.195",
     "@types/react": "~18.0.0",
     "@types/react-native": "~0.69.1",
     "babel-plugin-transform-inline-environment-variables": "^0.4.4",
