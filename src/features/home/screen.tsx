@@ -1,5 +1,5 @@
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
-import { Github, Twitter } from "@tamagui/feather-icons";
+import { Github, Twitter } from "@tamagui/lucide-icons";
 import { FC } from "react";
 import { Anchor, H1, H5, ListItem, Separator, YGroup, YStack } from "tamagui";
 
