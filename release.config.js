@@ -6,12 +6,11 @@ module.exports = {
       {
         preset: "angular",
         releaseRules: [
-          { type: "BREAKING", release: "major" },
+          { type: "feat!", release: "major" },
           { type: "feat", release: "minor" },
+          { type: "fix!", release: "major" },
           { type: "fix", release: "patch" },
-          { type: "ref", release: "patch" },
-          { type: "dep", release: "patch" },
-          { type: "chore", release: false },
+          { type: "chore", release: "patch" },
           { type: "ci", release: false },
           { type: "docs", release: false },
         ],
@@ -24,7 +23,12 @@ module.exports = {
         presetConfig: {
           types: [
             {
-              type: "BREAKING",
+              type: "feat!",
+              section: ":boom: BREAKING CHANGE",
+              hidden: false,
+            },
+            {
+              type: "fix!",
               section: ":boom: BREAKING CHANGE",
               hidden: false,
             },
@@ -44,18 +48,8 @@ module.exports = {
               hidden: false,
             },
             {
-              type: "ref",
-              section: ":zap: Refactorings and Dependency Changes",
-              hidden: false,
-            },
-            {
-              type: "dep",
-              section: ":zap: Refactorings and Dependency Changes",
-              hidden: false,
-            },
-            {
               type: "ci",
-              section: ":repeat: CI",
+              section: ":repeat: CI/CD",
               hidden: false,
             },
             {
@@ -72,24 +66,14 @@ module.exports = {
       {
         replacements: [
           {
-            files: ["package.json"],
+            files: ["package.json", "app.json"],
             from: "\"version\": \".*\"", // eslint-disable-line
             to: "\"version\": \"${nextRelease.version}\"", // eslint-disable-line
           },
           {
-            files: ["app.config.ts"],
-            from: "version: \".*\"", // eslint-disable-line
-            to: "version: \"${nextRelease.version}\"", // eslint-disable-line
-          },
-          {
-            files: ["app.config.ts"],
-            from: "buildNumber: \".*\"", // eslint-disable-line
-            to: "buildNumber: \"${nextRelease.version}\"", // eslint-disable-line
-          },
-          {
-            files: ["app.config.ts"],
-            from: `versionCode: [^,]*`, // eslint-disable-line
-            to: (match) => `versionCode: ${parseInt(match.split(':')[1].trim()) + 1}`, // eslint-disable-line
+            files: ["app.json"],
+            from: `"versionCode": [^,]*`, // eslint-disable-line
+            to: (match) => `"versionCode": ${parseInt(match.split(':')[1].trim()) + 1}`, // eslint-disable-line
           },
         ],
       },
@@ -97,7 +81,7 @@ module.exports = {
     [
       "@semantic-release/git",
       {
-        assets: ["app.config.ts", "package.json", "yarn.lock", "CHANGELOG.md"],
+        assets: ["app.json", "package.json", "yarn.lock", "CHANGELOG.md"],
         message:
           "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}",
       },

@@ -10,8 +10,8 @@ module.exports = function (api) {
         {
           components: ["tamagui"],
           config: "./src/tamagui.config.ts",
-          logTimings: true,
-          disableExtraction: process.env.NODE_ENV === "development",
+          // logTimings: true,
+          // disableExtraction: process.env.NODE_ENV === "development",
         },
       ],
       [
