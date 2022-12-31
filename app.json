@@ -16,16 +16,16 @@
       "fallbackToCacheTimeout": 0
     },
     "android": {
-      "versionCode": 29,
-      "androidNavigationBar": {
-        "backgroundColor": "#ddffe2",
-        "barStyle": "dark-content"
-      },
-      "androidStatusBar": {
-        "backgroundColor": "#ddffe2",
-        "barStyle": "dark-content"
-      },
-      "plugins": ["expo-dev-client"]
-    }
+      "versionCode": 29
+    },
+    "androidNavigationBar": {
+      "backgroundColor": "#ddffe2",
+      "barStyle": "dark-content"
+    },
+    "androidStatusBar": {
+      "backgroundColor": "#ddffe2",
+      "barStyle": "dark-content"
+    },
+    "plugins": ["expo-dev-client"]
   }
 }
