@@ -3,7 +3,9 @@
     "name": "TET",
     "slug": "TET",
     "version": "2.0.6",
-    "assetBundlePatterns": ["**/*"],
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "orientation": "portrait",
     "userInterfaceStyle": "light",
     "jsEngine": "hermes",
@@ -17,14 +19,17 @@
     },
     "android": {
       "versionCode": 30,
-    "androidNavigationBar": {
-      "backgroundColor": "#ddffe2",
-      "barStyle": "dark-content"
-    },
-    "androidStatusBar": {
-      "backgroundColor": "#ddffe2",
-      "barStyle": "dark-content"
-    },
-    "plugins": ["expo-dev-client"]
+      "androidNavigationBar": {
+        "backgroundColor": "#ddffe2",
+        "barStyle": "dark-content"
+      },
+      "androidStatusBar": {
+        "backgroundColor": "#ddffe2",
+        "barStyle": "dark-content"
+      },
+      "plugins": [
+        "expo-dev-client"
+      ]
+    }
   }
 }
