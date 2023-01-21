@@ -5,11 +5,11 @@ import { TamaguiProvider } from "tamagui";
 import config from "../tamagui.config";
 
 export const Provider: FCC = ({ children }) => {
-  return (
-    <TamaguiProvider config={config}>
-      <Suspense>
-        <NavigationContainer>{children}</NavigationContainer>
-      </Suspense>
-    </TamaguiProvider>
-  );
+	return (
+		<TamaguiProvider config={config}>
+			<Suspense>
+				<NavigationContainer>{children}</NavigationContainer>
+			</Suspense>
+		</TamaguiProvider>
+	);
 };
