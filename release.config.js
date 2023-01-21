@@ -12,9 +12,9 @@ module.exports = {
 					{ type: "fix", release: "patch" },
 					{ type: "chore", release: "patch" },
 					{ type: "ci", release: false },
-					{ type: "docs", release: false },
-				],
-			},
+					{ type: "docs", release: false }
+				]
+			}
 		],
 		[
 			"@semantic-release/release-notes-generator",
@@ -25,41 +25,41 @@ module.exports = {
 						{
 							type: "feat!",
 							section: ":boom: BREAKING CHANGE",
-							hidden: false,
+							hidden: false
 						},
 						{
 							type: "fix!",
 							section: ":boom: BREAKING CHANGE",
-							hidden: false,
+							hidden: false
 						},
 						{
 							type: "feat",
 							section: ":sparkles: Features",
-							hidden: false,
+							hidden: false
 						},
 						{
 							type: "fix",
 							section: ":bug: Fixes",
-							hidden: false,
+							hidden: false
 						},
 						{
 							type: "docs",
 							section: ":memo: Documentation",
-							hidden: false,
+							hidden: false
 						},
 						{
 							type: "ci",
 							section: ":repeat: CI/CD",
-							hidden: false,
+							hidden: false
 						},
 						{
 							type: "chore",
 							section: ":broom: Chore",
-							hidden: false,
-						},
-					],
-				},
-			},
+							hidden: false
+						}
+					]
+				}
+			}
 		],
 		[
 			"@google/semantic-release-replace-plugin",
@@ -74,19 +74,19 @@ module.exports = {
 						files: ["app.json"],
 						from: `"versionCode": [^,]*`, // eslint-disable-line
 						to: (match) => `"versionCode": ${parseInt(match.split(':')[1].trim()) + 1}`, // eslint-disable-line
-					},
-				],
-			},
+					}
+				]
+			}
 		],
 		[
 			"@semantic-release/git",
 			{
 				assets: ["app.json", "package.json", "yarn.lock", "CHANGELOG.md"],
 				message:
-					"chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}",
-			},
+					"chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+			}
 		],
 		"@semantic-release/npm",
-		"@semantic-release/github",
-	],
+		"@semantic-release/github"
+	]
 };

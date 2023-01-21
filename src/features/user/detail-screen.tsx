@@ -1,7 +1,7 @@
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
 import { FC } from "react";
-import { YStack } from "tamagui";
 
+import { MyStack } from "../../components/MyStack";
 import { UserDetails } from "./user-details";
 
 export const UserDetailScreen: FC<
@@ -10,14 +10,8 @@ export const UserDetailScreen: FC<
 	const { id } = route.params;
 
 	return (
-		<YStack
-			backgroundColor="$backgroundStrong"
-			height="100%"
-			flex={1}
-			padding="$4"
-			space
-		>
+		<MyStack>
 			<UserDetails id={id} />
-		</YStack>
+		</MyStack>
 	);
 };

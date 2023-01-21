@@ -9,10 +9,10 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
 	icon: IS_DEV
 		? "./src/assets/icons/icon-dev.png"
 		: IS_BETA
-			? "./src/assets/icons/icon-beta.png"
-			: "./src/assets/icons/icon.png",
+		? "./src/assets/icons/icon-beta.png"
+		: "./src/assets/icons/icon.png",
 	android: {
 		...config.android,
-		package: IS_DEV ? "dev.tamagui.expo.devclient" : "dev.tamagui.expo.client",
-	},
+		package: IS_DEV ? "dev.tamagui.expo.devclient" : "dev.tamagui.expo.client"
+	}
 });

@@ -3,7 +3,7 @@ module.exports = {
 	extends: [
 		"universe/native",
 		"universe/shared/typescript-analysis",
-		"prettier",
+		"prettier"
 	],
 	plugins: [],
 	rules: {
@@ -26,17 +26,18 @@ module.exports = {
 				tabWidth: 2,
 				singleQuote: false,
 				bracketSameLine: false,
-				trailingComma: "es6",
+				trailingComma: "none",
+				singleAttributePerLine: true
 			},
-			{ usePrettierrc: false },
-		],
+			{ usePrettierrc: false }
+		]
 	},
 	overrides: [
 		{
 			files: ["*.ts", "*.tsx", "*.d.ts"],
 			parserOptions: {
-				project: "./tsconfig.json",
-			},
-		},
-	],
+				project: "./tsconfig.json"
+			}
+		}
+	]
 };

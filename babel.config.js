@@ -11,16 +11,16 @@ module.exports = function (api) {
 					components: ["tamagui"],
 					config: "./src/tamagui.config.ts",
 					logTimings: true,
-					disableExtraction: process.env.NODE_ENV === "development",
-				},
+					disableExtraction: process.env.NODE_ENV === "development"
+				}
 			],
 			[
 				"transform-inline-environment-variables",
 				{
-					include: "TAMAGUI_TARGET",
-				},
+					include: "TAMAGUI_TARGET"
+				}
 			],
-			"react-native-reanimated/plugin",
-		],
+			"react-native-reanimated/plugin"
+		]
 	};
 };
