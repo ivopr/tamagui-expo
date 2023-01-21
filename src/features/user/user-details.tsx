@@ -11,7 +11,7 @@ export const UserDetails: FC<UserDetailProps> = ({ id }) => {
 			alignItems="center"
 			space="$1"
 		>
-			<H4 textTransform="capitalize">{id}</H4>
+			<H4 textTransform="capitalize">{id !== "" ? id : "John Doe"}</H4>
 		</YStack>
 	);
 };
