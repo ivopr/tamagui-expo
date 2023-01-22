@@ -2,7 +2,7 @@
   "expo": {
     "name": "TET",
     "slug": "TET",
-    "version": "2.1.0",
+    "version": "2.1.1",
     "assetBundlePatterns": [
       "**/*"
     ],
@@ -18,7 +18,7 @@
       "fallbackToCacheTimeout": 0
     },
     "android": {
-      "versionCode": 33,
+      "versionCode": 34,
     },
     "androidNavigationBar": {
       "backgroundColor": "#ddffe2",
