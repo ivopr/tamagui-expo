@@ -18,7 +18,8 @@
 			"fallbackToCacheTimeout": 0
 		},
 		"android": {
-			"versionCode": 37,
+			"versionCode": 37
+		},
 		"androidNavigationBar": {
 			"backgroundColor": "#ddffe2",
 			"barStyle": "dark-content"
