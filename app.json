@@ -1,35 +1,35 @@
 {
-  "expo": {
-    "name": "TET",
-    "slug": "TET",
-    "version": "2.1.3",
-    "assetBundlePatterns": [
-      "**/*"
-    ],
-    "orientation": "portrait",
-    "userInterfaceStyle": "light",
-    "jsEngine": "hermes",
-    "splash": {
-      "backgroundColor": "#ddffe2",
-      "image": "./src/assets/splash.png",
-      "resizeMode": "contain"
-    },
-    "updates": {
-      "fallbackToCacheTimeout": 0
-    },
-    "android": {
-      "versionCode": 36,
-    },
-    "androidNavigationBar": {
-      "backgroundColor": "#ddffe2",
-      "barStyle": "dark-content"
-    },
-    "androidStatusBar": {
-      "backgroundColor": "#ddffe2",
-      "barStyle": "dark-content"
-    },
-    "plugins": [
-      "expo-dev-client"
-    ]
-  }
+	"expo": {
+		"name": "TET",
+		"slug": "TET",
+		"version": "2.1.3",
+		"assetBundlePatterns": [
+			"**/*"
+		],
+		"orientation": "portrait",
+		"userInterfaceStyle": "light",
+		"jsEngine": "hermes",
+		"splash": {
+			"backgroundColor": "#ddffe2",
+			"image": "./src/assets/splash.png",
+			"resizeMode": "contain"
+		},
+		"updates": {
+			"fallbackToCacheTimeout": 0
+		},
+		"android": {
+			"versionCode": 36
+		},
+		"androidNavigationBar": {
+			"backgroundColor": "#ddffe2",
+			"barStyle": "dark-content"
+		},
+		"androidStatusBar": {
+			"backgroundColor": "#ddffe2",
+			"barStyle": "dark-content"
+		},
+		"plugins": [
+			"expo-dev-client"
+		]
+	}
 }

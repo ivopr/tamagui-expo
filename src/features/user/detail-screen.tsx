@@ -6,6 +6,7 @@ import { MyStack } from "../../components/MyStack";
 import { AlertDialogDemo } from "./alert-dialog";
 import { DialogDemo } from "./dialog";
 import { InputDemo } from "./input";
+import { SelectDemo } from "./select";
 import { UserDetails } from "./user-details";
 
 export const UserDetailScreen: FC<
@@ -22,12 +23,13 @@ export const UserDetailScreen: FC<
 			<UserDetails id={id} />
 			<YStack space="$2.5">
 				<InputDemo
-					fieldId="username"
+					fieldId="username12"
 					label="Form Input"
 					placeholder="John Doe"
 				/>
 				<AlertDialogDemo />
 				<DialogDemo />
+				<SelectDemo />
 			</YStack>
 		</MyStack>
 	);

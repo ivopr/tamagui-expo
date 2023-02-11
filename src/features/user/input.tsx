@@ -15,7 +15,10 @@ export const InputDemo: FC<FormInputProps> = ({
 	return (
 		<Fieldset>
 			<Label htmlFor={fieldId}>{label}</Label>
-			<Input placeholder={placeholder} />
+			<Input
+				id={fieldId}
+				placeholder={placeholder}
+			/>
 		</Fieldset>
 	);
 };

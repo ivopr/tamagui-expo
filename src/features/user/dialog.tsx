@@ -14,10 +14,7 @@ export function DialogDemo() {
 				when="sm"
 				platform="touch"
 			>
-				<Sheet
-					modal
-					dismissOnSnapToBottom
-				>
+				<Sheet modal>
 					<Sheet.Frame
 						padding="$4"
 						space
@@ -58,7 +55,7 @@ export function DialogDemo() {
 					</Dialog.Description>
 
 					<InputDemo
-						fieldId="username"
+						fieldId="usernamea"
 						label="Form Input"
 						placeholder="John Doe"
 					/>
