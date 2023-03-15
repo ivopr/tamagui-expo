@@ -15,11 +15,11 @@
   "dependencies": {
     "@react-navigation/native": "6.1.1",
     "@react-navigation/native-stack": "6.9.7",
-    "@tamagui/animations-reanimated": "1.7.0",
-    "@tamagui/font-inter": "1.7.0",
-    "@tamagui/lucide-icons": "1.7.0",
-    "@tamagui/shorthands": "1.7.0",
-    "@tamagui/themes": "1.7.0",
+    "@tamagui/animations-reanimated": "1.7.7",
+    "@tamagui/font-inter": "1.7.7",
+    "@tamagui/lucide-icons": "1.7.7",
+    "@tamagui/shorthands": "1.7.7",
+    "@tamagui/themes": "1.7.7",
     "expo": "47.0.13",
     "expo-dev-client": "2.0.1",
     "expo-font": "11.0.1",
@@ -34,7 +34,7 @@
     "react-native-screens": "3.18.2",
     "react-native-svg": "13.4.0",
     "react-native-web": "0.18.10",
-    "tamagui": "1.7.0"
+    "tamagui": "1.7.7"
   },
   "resolutions": {
     "react-native-svg": "13.4.0"
@@ -48,7 +48,7 @@
     "@semantic-release/github": "8.0.6",
     "@semantic-release/npm": "9.0.1",
     "@semantic-release/release-notes-generator": "10.0.3",
-    "@tamagui/babel-plugin": "1.7.0",
+    "@tamagui/babel-plugin": "1.7.7",
     "@types/react": "18.0.25",
     "@types/react-native": "0.70.6",
     "babel-plugin-transform-inline-environment-variables": "0.4.4",
