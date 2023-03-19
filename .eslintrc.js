@@ -1,43 +1,44 @@
 module.exports = {
-	parser: "@typescript-eslint/parser",
-	extends: [
-		"universe/native",
-		"universe/shared/typescript-analysis",
-		"prettier"
-	],
-	plugins: [],
-	rules: {
-		// We will use TypeScript's types for component props instead
-		"react/prop-types": "off",
-
-		// Why would you want unused vars?
-		"@typescript-eslint/no-unused-vars": "warn",
-
-		// I suggest this setting for requiring return types on functions only where useful
-		"@typescript-eslint/explicit-function-return-type": "off",
-
-		// Includes .prettierrc.js rules
-		"prettier/prettier": [
-			"warn",
-			{
-				endOfLine: "auto",
-				printWidth: 80,
-				useTabs: true,
-				tabWidth: 2,
-				singleQuote: false,
-				bracketSameLine: false,
-				trailingComma: "none",
-				singleAttributePerLine: true
-			},
-			{ usePrettierrc: false }
-		]
-	},
-	overrides: [
-		{
-			files: ["*.ts", "*.tsx", "*.d.ts"],
-			parserOptions: {
-				project: "./tsconfig.json"
-			}
-		}
-	]
+  env: {
+    node: true
+  },
+  extends: [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended",
+    "plugin:prettier/recommended"
+  ],
+  parser: "@typescript-eslint/parser",
+  root: true,
+  plugins: ["simple-import-sort"],
+  rules: {
+    "@typescript-eslint/ban-ts-comment": "off",
+    "@typescript-eslint/no-var-requires": "off",
+    "@typescript-eslint/no-empty-interface": "off",
+    "prettier/prettier": ["warn", { usePrettierrc: true }],
+    "react/react-in-jsx-scope": "off",
+    "@typescript-eslint/no-unused-vars": ["warn"],
+    "simple-import-sort/exports": "warn",
+    "simple-import-sort/imports": [
+      "warn",
+      {
+        groups: [
+          // Side effect imports.
+          ["^\\u0000"],
+          // Packages `react` related packages come first.
+          ["^react", "^@?\\w"],
+          // Internal packages.
+          ["^(@prism)(/.*|$)"],
+          // Environment variables
+          ["^(@env)(/.*|$)"],
+          // Parent imports. Put `..` last.
+          ["^\\.\\.(?!/?$)", "^\\.\\./?$"],
+          // Other relative imports. Put same-folder imports and `.` last.
+          ["^\\./(?=.*/)(?!/?$)", "^\\.(?!/?$)", "^\\./?$"],
+          // Style imports.
+          ["^.+\\.?(css)$"]
+        ]
+      }
+    ]
+  }
 };

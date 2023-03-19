@@ -1,9 +1,24 @@
 {
+	"editor.codeActionsOnSave": {
+		"source.fixAll": true,
+	},
+	"typescript.format.insertSpaceAfterOpeningAndBeforeClosingEmptyBraces": false,
 	"[typescript]": {
 		"editor.defaultFormatter": "dbaeumer.vscode-eslint"
 	},
-	"editor.codeActionsOnSave": {
-		"source.fixAll": true,
-		"source.organizeImports": true
-	}
+	"[typescriptreact]": {
+		"editor.defaultFormatter": "dbaeumer.vscode-eslint"
+	},
+	"typescript.preferences.importModuleSpecifier": "non-relative",
+	"files.exclude": {
+		"**/.git": true,
+		"**/.svn": true,
+		"**/.hg": true,
+		"**/CVS": true,
+		"**/.DS_Store": true,
+		"**/Thumbs.db": true,
+		".expo": true,
+		".yarn": true,
+		"node_modules": true,
+	},
 }

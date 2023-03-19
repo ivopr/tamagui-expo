@@ -1,35 +1,11 @@
 {
-	"expo": {
-		"name": "TET",
-		"slug": "TET",
-		"version": "2.2.5",
-		"assetBundlePatterns": [
-			"**/*"
-		],
-		"orientation": "portrait",
-		"userInterfaceStyle": "light",
-		"jsEngine": "hermes",
-		"splash": {
-			"backgroundColor": "#ddffe2",
-			"image": "./src/assets/splash.png",
-			"resizeMode": "contain"
-		},
-		"updates": {
-			"fallbackToCacheTimeout": 0
-		},
-		"android": {
-			"versionCode": 42
-		},
-		"androidNavigationBar": {
-			"backgroundColor": "#ddffe2",
-			"barStyle": "dark-content"
-		},
-		"androidStatusBar": {
-			"backgroundColor": "#ddffe2",
-			"barStyle": "dark-content"
-		},
-		"plugins": [
-			"expo-dev-client"
-		]
-	}
+  "expo": {
+    "scheme": "tamagui-app",
+    "userInterfaceStyle": "automatic",
+    "web": {
+      "bundler": "metro"
+    },
+    "name": "tamagui-app",
+    "slug": "tamagui-app"
+  }
 }
