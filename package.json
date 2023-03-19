@@ -63,6 +63,6 @@
     "metro-resolver": "^0.73.7"
   },
   "name": "tamagui-app",
-  "version": "1.0.0",
+  "version": "3.0.0",
   "private": true
 }
