@@ -14,7 +14,7 @@
 ## Quick Start
 Just run the following, changing `youprojectname` to the name of your project.
 ```
-npx create-expo-app youprojectname -t tamagui-expo-template --no-install
+npx create-expo-app yourappname -t tamagui-expo-template --no-install
 cd yourappname
 yarn install
 ```
