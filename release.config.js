@@ -66,8 +66,8 @@ module.exports = {
         message:
           "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
       }
-    ]
-    // "@semantic-release/npm",
-    // "@semantic-release/github"
+    ],
+    "@semantic-release/npm",
+    "@semantic-release/github"
   ]
 };

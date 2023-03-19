@@ -24,11 +24,12 @@ If you have [Expo Go](https://expo.dev/client) app installed, just start your ne
 This is a starter template for [Expo](https://expo.dev) using [Tamagui](https://tamagui.dev).
 In this template you get out of the box:
 - Semantic Release already configured with everything you might want
-- EAS (Expo Application Services) profiles already configured
-- Different icons for different app types (Dev Client, Beta and Production)
+- Expo Router up and running
+- Tamagui, a nice and modern way of building your UIs
+- ESLint and Prettier configurations
 
 ## What you don't get
-- Expo Web support
+- Expo Web support (for this, go to the [Official Tamagui Starter](https://github.com/tamagui/tamagui))
 - i18n
 - Global State management
 
