@@ -2,6 +2,12 @@
   "expo": {
     "scheme": "tamagui-app",
     "userInterfaceStyle": "automatic",
+    "splash": {
+      "backgroundColor": "#ddffe2",
+      "image": "./assets/splash.png",
+      "resizeMode": "contain"
+    },
+    "icon": "./assets/icon.png",
     "web": {
       "bundler": "metro"
     },
