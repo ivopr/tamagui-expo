@@ -68,7 +68,9 @@ export function SelectDemo() {
                     key={item.name}
                     value={item.name.toLowerCase()}
                   >
-                    <Select.ItemText>{item.name}</Select.ItemText>
+                    <Select.ItemText color="$color">
+                      {item.name}
+                    </Select.ItemText>
                     <Select.ItemIndicator ml="auto">
                       <Check size={16} />
                     </Select.ItemIndicator>
