@@ -3,15 +3,16 @@
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
-    "web": "expo start --web"
+    "web": "expo start --web",
+    "upgrade:tamagui": "manypkg upgrade tamagui && manypkg upgrade @tamagui && manypkg upgrade tamagui-loader"
   },
   "dependencies": {
-    "@tamagui/animations-react-native": "^1.7.9",
-    "@tamagui/babel-plugin": "^1.7.9",
-    "@tamagui/config": "^1.7.9",
-    "@tamagui/font-inter": "^1.7.9",
-    "@tamagui/lucide-icons": "^1.7.9",
-    "@tamagui/themes": "^1.7.9",
+    "@tamagui/animations-react-native": "^1.9.0",
+    "@tamagui/babel-plugin": "^1.9.0",
+    "@tamagui/config": "^1.9.0",
+    "@tamagui/font-inter": "^1.9.0",
+    "@tamagui/lucide-icons": "^1.9.0",
+    "@tamagui/themes": "^1.9.0",
     "expo": "^48.0.4",
     "expo-constants": "~14.2.1",
     "expo-font": "^11.1.1",
@@ -29,29 +30,30 @@
     "react-native-screens": "~3.20.0",
     "react-native-svg": "13.4.0",
     "react-native-web": "^0.18.12",
-    "tamagui": "^1.7.9"
+    "tamagui": "^1.9.0"
   },
   "devDependencies": {
     "@babel/core": "^7.19.3",
-    "@google/semantic-release-replace-plugin": "1.1.0",
     "@babel/plugin-proposal-export-namespace-from": "^7.18.9",
+    "@google/semantic-release-replace-plugin": "1.1.0",
+    "@manypkg/cli": "^0.20.0",
+    "@semantic-release/changelog": "6.0.1",
+    "@semantic-release/git": "10.0.1",
+    "@semantic-release/github": "8.0.6",
+    "@semantic-release/npm": "9.0.1",
+    "@semantic-release/release-notes-generator": "10.0.3",
     "@types/react": "~18.0.27",
     "@typescript-eslint/eslint-plugin": "^5.49.0",
     "@typescript-eslint/parser": "^5.49.0",
     "babel-plugin-transform-inline-environment-variables": "^0.4.4",
+    "conventional-changelog-conventionalcommits": "5.0.0",
     "eslint": "^8.21.0",
     "eslint-config-prettier": "^8.6.0",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.32.1",
     "eslint-plugin-simple-import-sort": "^10.0.0",
     "prettier": "^2.8.3",
-    "@semantic-release/changelog": "6.0.1",
-    "@semantic-release/git": "10.0.1",
-    "@semantic-release/github": "8.0.6",
-    "conventional-changelog-conventionalcommits": "5.0.0",
-    "@semantic-release/npm": "9.0.1",
     "semantic-release": "19.0.5",
-    "@semantic-release/release-notes-generator": "10.0.3",
     "typescript": "^4.9.4"
   },
   "resolutions": {
@@ -63,6 +65,5 @@
     "metro-resolver": "^0.73.7"
   },
   "name": "tamagui-expo-template",
-  "version": "3.0.2",
-  "private": false
+  "version": "3.0.2"
 }
