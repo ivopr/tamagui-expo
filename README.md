@@ -2,7 +2,7 @@
 ###### This is a community template
 
 <p align="center">
-  <img src="./src/assets/icons/icon.png" alt="Tamagui Icon"/>
+  <img src="./assets/icon.png" alt="Tamagui Icon"/>
 </p>
 
 <div align="center">
