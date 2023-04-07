@@ -7,12 +7,13 @@
     "upgrade:tamagui": "manypkg upgrade tamagui && manypkg upgrade @tamagui && manypkg upgrade tamagui-loader"
   },
   "dependencies": {
-    "@tamagui/animations-react-native": "^1.9.0",
-    "@tamagui/babel-plugin": "^1.9.0",
-    "@tamagui/config": "^1.9.0",
-    "@tamagui/font-inter": "^1.9.0",
-    "@tamagui/lucide-icons": "^1.9.0",
-    "@tamagui/themes": "^1.9.0",
+    "@tamagui/animations-react-native": "^1.12.2",
+    "@tamagui/babel-plugin": "^1.12.2",
+    "@tamagui/config": "^1.12.2",
+    "@tamagui/font-inter": "^1.12.2",
+    "@tamagui/lucide-icons": "^1.12.2",
+    "@tamagui/themes": "^1.12.2",
+    "burnt": "^0.10.0",
     "expo": "^48.0.4",
     "expo-constants": "~14.2.1",
     "expo-font": "^11.1.1",
@@ -23,14 +24,14 @@
     "expo-status-bar": "~1.4.2",
     "react": "18.2.0",
     "react-dom": "^18.2.0",
-    "react-native": "0.71.3",
+    "react-native": "0.71.6",
     "react-native-gesture-handler": "~2.9.0",
     "react-native-reanimated": "~2.14.4",
     "react-native-safe-area-context": "4.5.0",
     "react-native-screens": "~3.20.0",
     "react-native-svg": "13.4.0",
     "react-native-web": "^0.18.12",
-    "tamagui": "^1.9.0"
+    "tamagui": "^1.12.2"
   },
   "devDependencies": {
     "@babel/core": "^7.19.3",

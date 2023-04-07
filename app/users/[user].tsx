@@ -7,6 +7,7 @@ import { MyStack } from "../../components/MyStack";
 import { SelectDemo } from "../../components/SelectDemo";
 import { SpinnerDemo } from "../../components/SpinnerDemo";
 import { SwitchDemo } from "../../components/SwitchDemo";
+import { ToastDemo } from "../../components/ToastDemo";
 
 export default function User() {
   const router = useRouter();
@@ -32,6 +33,7 @@ export default function User() {
       <SelectDemo />
       <SpinnerDemo />
       <SwitchDemo />
+      <ToastDemo />
     </MyStack>
   );
 }
