@@ -1,4 +1,5 @@
-import { Button, Toast, useToast, XStack, YStack } from "tamagui";
+import { Toast, useToast } from "@tamagui/toast";
+import { Button, XStack, YStack } from "tamagui";
 
 export const ToastDemo = () => {
   return (
@@ -45,7 +46,8 @@ const ToastControl = ({ native }: { native: boolean }) => {
       justifyContent="center"
     >
       <Button
-        theme="green_Button"
+        theme="green_alt2_Button"
+        color="#ffffff"
         onPress={() => {
           toast.show("Successfully saved!", {
             message: "Don't worry, we've got your data.",

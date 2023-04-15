@@ -41,7 +41,8 @@ export default function Home() {
           href={`/users/${username}`}
         >
           <Button
-            theme="green_Button"
+            theme="green_alt2_Button"
+            color="#ffffff"
             disabled={username.length === 0}
           >
             Go to user page

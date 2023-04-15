@@ -17,7 +17,12 @@ export function DialogDemo() {
   return (
     <Dialog modal>
       <Dialog.Trigger asChild>
-        <Button theme="blue_Button">Edit Profile</Button>
+        <Button
+          theme="blue_alt2_Button"
+          color="#ffffff"
+        >
+          Edit Profile
+        </Button>
       </Dialog.Trigger>
 
       <Adapt

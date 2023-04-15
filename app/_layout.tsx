@@ -1,10 +1,11 @@
 import { useColorScheme } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { ThemeProvider } from "@react-navigation/native";
+import { ToastProvider } from "@tamagui/toast";
 import { useFonts } from "expo-font";
 import { SplashScreen, Stack } from "expo-router";
 import { StatusBar } from "expo-status-bar";
-import { TamaguiProvider, Theme, ToastProvider } from "tamagui";
+import { TamaguiProvider, Theme } from "tamagui";
 
 import config from "../tamagui.config";
 import { emerald, zinc } from "../utils/colors";
