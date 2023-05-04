@@ -1,7 +1,6 @@
 import { useColorScheme } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { ThemeProvider } from "@react-navigation/native";
-import { ToastProvider } from "@tamagui/toast";
 import { useFonts } from "expo-font";
 import { SplashScreen, Stack } from "expo-router";
 import { StatusBar } from "expo-status-bar";
@@ -38,15 +37,13 @@ export default function Layout() {
     >
       <TamaguiProvider config={config}>
         <Theme name={colorScheme}>
-          <ToastProvider native={["mobile"]}>
-            <SafeAreaView style={{ flex: 1 }}>
-              <Stack
-                screenOptions={{
-                  headerShown: false
-                }}
-              />
-            </SafeAreaView>
-          </ToastProvider>
+          <SafeAreaView style={{ flex: 1 }}>
+            <Stack
+              screenOptions={{
+                headerShown: false
+              }}
+            />
+          </SafeAreaView>
         </Theme>
         <StatusBar
           style="light"
