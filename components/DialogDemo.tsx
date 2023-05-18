@@ -11,18 +11,13 @@ import {
   YStack
 } from "tamagui";
 
-import { SelectDemo } from "./SelectDemo";
+import SelectDemo from "./SelectDemo";
 
-export function DialogDemo() {
+export default function DialogDemo() {
   return (
     <Dialog modal>
       <Dialog.Trigger asChild>
-        <Button
-          theme="blue_alt2_Button"
-          color="#ffffff"
-        >
-          Edit Profile
-        </Button>
+        <Button>Edit Profile</Button>
       </Dialog.Trigger>
 
       <Adapt

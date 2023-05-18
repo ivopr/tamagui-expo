@@ -1,6 +1,6 @@
 import { Label, Switch, XStack } from "tamagui";
 
-export function SwitchDemo() {
+export default function SwitchDemo() {
   return (
     <XStack
       alignItems="center"
@@ -13,7 +13,7 @@ export function SwitchDemo() {
         height="$2"
         lineHeight="$2"
       >
-        Dark mode
+        Dark mode (does nothing)
       </Label>
       <Switch
         id="switch-demo"

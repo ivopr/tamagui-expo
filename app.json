@@ -8,9 +8,6 @@
       "resizeMode": "contain"
     },
     "icon": "./assets/icon.png",
-    "web": {
-      "bundler": "metro"
-    },
     "name": "tamagui-app",
     "slug": "tamagui-app"
   }

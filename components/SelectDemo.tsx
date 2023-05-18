@@ -3,7 +3,7 @@ import { Check, ChevronDown, ChevronUp } from "@tamagui/lucide-icons";
 import { Adapt, Fieldset, Label, Select, Sheet, YStack } from "tamagui";
 import { LinearGradient } from "tamagui/linear-gradient";
 
-export function SelectDemo() {
+export default function SelectDemo() {
   const [val, setVal] = useState("apple");
 
   return (

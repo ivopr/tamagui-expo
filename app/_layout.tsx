@@ -1,13 +1,17 @@
+import { Suspense } from "react";
 import { useColorScheme } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { ThemeProvider } from "@react-navigation/native";
+import {
+  DarkTheme,
+  DefaultTheme,
+  ThemeProvider
+} from "@react-navigation/native";
 import { useFonts } from "expo-font";
 import { SplashScreen, Stack } from "expo-router";
 import { StatusBar } from "expo-status-bar";
-import { TamaguiProvider, Theme } from "tamagui";
+import { TamaguiProvider, Text, Theme } from "tamagui";
 
 import config from "../tamagui.config";
-import { emerald, zinc } from "../utils/colors";
 
 export default function Layout() {
   const colorScheme = useColorScheme();
@@ -22,34 +26,26 @@ export default function Layout() {
   }
 
   return (
-    <ThemeProvider
-      value={{
-        colors: {
-          border: "transparent",
-          primary: emerald["600"],
-          background: zinc["900"],
-          text: zinc["100"],
-          card: zinc["700"],
-          notification: emerald["400"]
-        },
-        dark: true
-      }}
-    >
-      <TamaguiProvider config={config}>
-        <Theme name={colorScheme}>
-          <SafeAreaView style={{ flex: 1 }}>
-            <Stack
-              screenOptions={{
-                headerShown: false
-              }}
-            />
-          </SafeAreaView>
-        </Theme>
-        <StatusBar
-          style="light"
-          backgroundColor="#000000"
-        />
-      </TamaguiProvider>
-    </ThemeProvider>
+    <TamaguiProvider config={config}>
+      <SafeAreaView style={{ flex: 1 }}>
+        <Suspense fallback={<Text>Loading...</Text>}>
+          <Theme name={colorScheme}>
+            <ThemeProvider
+              value={colorScheme === "light" ? DefaultTheme : DarkTheme}
+            >
+              <Stack
+                screenOptions={{
+                  headerShown: false
+                }}
+              />
+            </ThemeProvider>
+          </Theme>
+        </Suspense>
+      </SafeAreaView>
+      <StatusBar
+        style="light"
+        backgroundColor="#000000"
+      />
+    </TamaguiProvider>
   );
 }

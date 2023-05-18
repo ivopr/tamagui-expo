@@ -1,10 +1,8 @@
-import { useState } from "react";
 import { Github, Twitter } from "@tamagui/lucide-icons";
-import { Link } from "expo-router";
+import { Link, useRouter } from "expo-router";
 import {
   Button,
   H1,
-  Input,
   ListItem,
   Paragraph,
   Separator,
@@ -15,7 +13,7 @@ import {
 import { MyStack } from "../components/MyStack";
 
 export default function Home() {
-  const [username, setUsername] = useState("");
+  const router = useRouter();
 
   return (
     <MyStack>
@@ -30,25 +28,9 @@ export default function Home() {
         </Paragraph>
       </YStack>
 
-      <YStack space="$2">
-        <Input
-          value={username}
-          onChangeText={setUsername}
-          placeholder="Enter a username"
-        />
-        <Link
-          asChild
-          href={`/users/${username}`}
-        >
-          <Button
-            theme="green_alt2_Button"
-            color="#ffffff"
-            disabled={username.length === 0}
-          >
-            Go to user page
-          </Button>
-        </Link>
-      </YStack>
+      <Button onPress={() => router.push("/users/testuser")}>
+        Go to user page
+      </Button>
 
       <YStack space="$5">
         <YGroup

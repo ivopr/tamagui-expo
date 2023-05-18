@@ -1,6 +1,6 @@
 import { Spinner, XStack } from "tamagui";
 
-export function SpinnerDemo() {
+export default function SpinnerDemo() {
   return (
     <XStack
       padding="$3"
