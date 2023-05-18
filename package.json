@@ -4,7 +4,7 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "upgrade:tamagui": "manypkg upgrade tamagui && manypkg upgrade @tamagui && manypkg upgrade tamagui-loader"
+    "upgrade:tamagui": "$npm_execpath up '*tamagui*' '@tamagui/*'"
   },
   "dependencies": {
     "@tamagui/animations-react-native": "^1.22.12",
@@ -65,9 +65,5 @@
     "metro-resolver": "^0.73.7"
   },
   "name": "tamagui-expo-template",
-  "version": "3.2.3",
-  "volta": {
-    "node": "18.16.0",
-    "yarn": "3.5.1"
-  }
+  "version": "3.2.3"
 }
