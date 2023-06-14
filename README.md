@@ -12,7 +12,7 @@
 </div>
 
 ## Quick Start
-Just run the following, changing `youprojectname` to the name of your project.
+Just run the following, changing `yourappname` to the name of your project.
 ```
 npx create-expo-app yourappname -t tamagui-expo-template --no-install
 cd yourappname
@@ -39,5 +39,5 @@ In this template you get out of the box:
 
 ## Troubleshooting
 ### I'm on WSL but my app doesn't connect
-WSL2 runs inside it's own container, so it doesn't share the same IPv4 and port status as your host machine, you might need [this](https://gist.github.com/ivopr/64f974e632b7edcbe1f5e58b91e31598)
+WSL2 runs inside its own container, so it doesn't share the same IPv4 and port status as your host machine, you might need [this](https://gist.github.com/ivopr/64f974e632b7edcbe1f5e58b91e31598)
 
