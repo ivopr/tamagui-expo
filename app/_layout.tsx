@@ -1,6 +1,5 @@
 import { Suspense } from "react";
 import { useColorScheme } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
 import {
   DarkTheme,
   DefaultTheme,
@@ -11,6 +10,7 @@ import { SplashScreen, Stack } from "expo-router";
 import { StatusBar } from "expo-status-bar";
 import { TamaguiProvider, Text, Theme } from "tamagui";
 
+import { MySafeAreaView } from "../components/MySafeAreaView";
 import config from "../tamagui.config";
 
 export default function Layout() {
@@ -27,21 +27,21 @@ export default function Layout() {
 
   return (
     <TamaguiProvider config={config}>
-      <SafeAreaView style={{ flex: 1 }}>
-        <Suspense fallback={<Text>Loading...</Text>}>
-          <Theme name={colorScheme}>
-            <ThemeProvider
-              value={colorScheme === "light" ? DefaultTheme : DarkTheme}
-            >
+      <Suspense fallback={<Text>Loading...</Text>}>
+        <Theme name={colorScheme}>
+          <ThemeProvider
+            value={colorScheme === "light" ? DefaultTheme : DarkTheme}
+          >
+            <MySafeAreaView>
               <Stack
                 screenOptions={{
                   headerShown: false
                 }}
               />
-            </ThemeProvider>
-          </Theme>
-        </Suspense>
-      </SafeAreaView>
+            </MySafeAreaView>
+          </ThemeProvider>
+        </Theme>
+      </Suspense>
       <StatusBar
         style="light"
         backgroundColor="#000000"
