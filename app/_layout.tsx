@@ -42,10 +42,6 @@ export default function Layout() {
           </ThemeProvider>
         </Theme>
       </Suspense>
-      <StatusBar
-        style="light"
-        backgroundColor="#000000"
-      />
     </TamaguiProvider>
   );
 }
