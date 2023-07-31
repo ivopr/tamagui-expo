@@ -9,6 +9,9 @@
     },
     "icon": "./assets/icon.png",
     "name": "tamagui-app",
-    "slug": "tamagui-app"
+    "slug": "tamagui-app",
+    "plugins": [
+      "expo-router"
+    ]
   }
 }
