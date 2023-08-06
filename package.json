@@ -1,6 +1,6 @@
 {
   "name": "tamagui-expo-template",
-  "version": "3.3.0",
+  "version": "3.3.1",
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",
