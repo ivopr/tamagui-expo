@@ -63,5 +63,9 @@
     "metro-resolver": "^0.73.7"
   },
   "name": "tamagui-expo-template",
-  "version": "3.3.0"
+  "version": "3.3.0",
+  "volta": {
+    "node": "18.17.0",
+    "yarn": "3.6.1"
+  }
 }
