@@ -1,4 +1,4 @@
-import { Suspense } from "react";
+import { Suspense, useEffect } from "react";
 import { useColorScheme } from "react-native";
 import {
   DarkTheme,
@@ -7,11 +7,12 @@ import {
 } from "@react-navigation/native";
 import { useFonts } from "expo-font";
 import { SplashScreen, Stack } from "expo-router";
-import { StatusBar } from "expo-status-bar";
 import { TamaguiProvider, Text, Theme } from "tamagui";
 
 import { MySafeAreaView } from "../components/MySafeAreaView";
 import config from "../tamagui.config";
+
+SplashScreen.preventAutoHideAsync();
 
 export default function Layout() {
   const colorScheme = useColorScheme();
@@ -21,27 +22,29 @@ export default function Layout() {
     InterBold: require("@tamagui/font-inter/otf/Inter-Bold.otf")
   });
 
-  if (!loaded) {
-    return <SplashScreen />;
-  }
+  useEffect(() => {
+    if (loaded) {
+      SplashScreen.hideAsync();
+    }
+  }, [loaded]);
 
   return (
     <TamaguiProvider config={config}>
-      <Suspense fallback={<Text>Loading...</Text>}>
-        <Theme name={colorScheme}>
-          <ThemeProvider
-            value={colorScheme === "light" ? DefaultTheme : DarkTheme}
-          >
-            <MySafeAreaView>
+      <MySafeAreaView>
+        <Suspense fallback={<Text>Loading...</Text>}>
+          <Theme name={colorScheme}>
+            <ThemeProvider
+              value={colorScheme === "light" ? DefaultTheme : DarkTheme}
+            >
               <Stack
                 screenOptions={{
                   headerShown: false
                 }}
               />
-            </MySafeAreaView>
-          </ThemeProvider>
-        </Theme>
-      </Suspense>
+            </ThemeProvider>
+          </Theme>
+        </Suspense>
+      </MySafeAreaView>
     </TamaguiProvider>
   );
 }

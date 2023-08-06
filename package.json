@@ -13,13 +13,13 @@
     "@tamagui/font-inter": "^1.49.10",
     "@tamagui/lucide-icons": "^1.49.10",
     "@tamagui/themes": "^1.49.10",
-    "expo": "49.0.2",
+    "expo": "49.0.6",
     "expo-constants": "~14.4.2",
-    "expo-font": "~11.4.0",
+    "expo-font": "11.4.0",
     "expo-linear-gradient": "~12.3.0",
     "expo-linking": "~5.0.2",
     "expo-router": "2.0.0",
-    "expo-splash-screen": "~0.20.4",
+    "expo-splash-screen": "~0.20.5",
     "expo-status-bar": "~1.6.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
@@ -55,6 +55,7 @@
     "typescript": "^5.1.3"
   },
   "resolutions": {
+    "expo-font": "11.4.0",
     "metro": "^0.73.7",
     "metro-resolver": "^0.73.7"
   },
