@@ -30,21 +30,21 @@ export default function Layout() {
 
   return (
     <TamaguiProvider config={config}>
-      <MySafeAreaView>
-        <Suspense fallback={<Text>Loading...</Text>}>
-          <Theme name={colorScheme}>
-            <ThemeProvider
-              value={colorScheme === "light" ? DefaultTheme : DarkTheme}
-            >
+      <Suspense fallback={<Text>Loading...</Text>}>
+        <Theme name={colorScheme}>
+          <ThemeProvider
+            value={colorScheme === "light" ? DefaultTheme : DarkTheme}
+          >
+            <MySafeAreaView>
               <Stack
                 screenOptions={{
                   headerShown: false
                 }}
               />
-            </ThemeProvider>
-          </Theme>
-        </Suspense>
-      </MySafeAreaView>
+            </MySafeAreaView>
+          </ThemeProvider>
+        </Theme>
+      </Suspense>
     </TamaguiProvider>
   );
 }
