@@ -28,6 +28,8 @@ export default function Layout() {
     }
   }, [loaded]);
 
+  if (!loaded) return null;
+
   return (
     <TamaguiProvider config={config}>
       <Suspense fallback={<Text>Loading...</Text>}>
