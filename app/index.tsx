@@ -28,9 +28,12 @@ export default function Home() {
         </Paragraph>
       </YStack>
 
-      <Button onPress={() => router.push("/users/testuser")}>
-        Go to user page
-      </Button>
+      <YStack space="$2.5">
+        <Button onPress={() => router.push("/users/testuser")}>
+          Go to user page
+        </Button>
+        <Button onPress={() => router.push("/tabs")}>Go to tabs page</Button>
+      </YStack>
 
       <YStack space="$5">
         <YGroup
