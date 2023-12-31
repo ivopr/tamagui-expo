@@ -15,14 +15,29 @@ jobs:
       - name: Setup Repo
         uses: actions/checkout@v2
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v2
+      - name: Install Node
+        uses: actions/setup-node@v3
         with:
-          node-version: 16.x
+          node-version: 20
+
+      - name: Install Yarn
+        run: corepack enable |
+          corepack prepare yarn@3.6.4 --activate
+
+      # Yarn dependencies cannot be cached until yarn is installed
+      # WORKAROUND: https://github.com/actions/setup-node/issues/531
+      - name: Extract Cached Dependencies
+        uses: actions/setup-node@v3
+        with:
           cache: yarn
 
-      - name: Install dependencies
-        run: yarn install
+      - name: Install Dependencies
+        run: yarn --immutable
+
+      - name: Set Git user to Actions Bot
+        run: |
+          git config --local user.name 'github-actions[bot]'
+          git config --local user.email '41898282+github-actions[bot]@users.noreply.github.com'
         
       - name: Semantic release
         env:
