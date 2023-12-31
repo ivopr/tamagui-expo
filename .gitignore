@@ -1,4 +1,5 @@
 node_modules/
+.tamagui
 .expo/
 dist/
 npm-debug.*
