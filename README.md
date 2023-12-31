@@ -6,7 +6,7 @@
 </p>
 
 <div align="center">
-  <a target="_blank" href="https://expo.dev/%40ivopr/TET?serviceType=classic&distribution=expo-go&releaseChannel=default">
+  <a target="_blank" href="https://expo.dev/%40ivopr/tamagui-app?serviceType=eas&distribution=expo-go&scheme=&channel=main&sdkVersion=49.0.0">
       <img src="https://img.shields.io/badge/Open%20in%20Expo%20Go-4630EB.svg?style=flat-square&logo=EXPO&labelColor=f3f3f3&logoColor=000" alt="Open in Expo Go"/>
     </a>
 </div>
