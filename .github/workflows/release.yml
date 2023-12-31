@@ -32,7 +32,7 @@ jobs:
           cache: yarn
 
       - name: Install Dependencies
-        run: yarn --immutable
+        run: yarn
 
       - name: Set Git user to Actions Bot
         run: |
