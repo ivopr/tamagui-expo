@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { H5, Tabs, Text } from "tamagui";
 
 import { MyStack } from "../../components/MyStack";

@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { Github, Twitter } from "@tamagui/lucide-icons";
 import { Link, useRouter } from "expo-router";
 import {
@@ -19,10 +20,7 @@ export default function Home() {
   return (
     <MySafeAreaView>
       <MyStack>
-        <YStack
-          space="$4"
-          maxWidth={600}
-        >
+        <YStack maxWidth={600}>
           <H1 textAlign="center">Welcome to Tamagui.</H1>
           <Paragraph textAlign="center">
             Here&apos;s a basic starter to show navigating from one screen to

@@ -66,4 +66,8 @@ declare module "tamagui" {
   interface TamaguiCustomConfig extends AppConfig {}
 }
 
+declare module "@tamagui/core" {
+  interface TamaguiCustomConfig extends AppConfig {}
+}
+
 export default config;

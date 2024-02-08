@@ -1,6 +1,9 @@
 # Tamagui Expo Template
 ###### This is a community template
 
+> [!NOTE]
+> This has now been archived. Meaning I won't be pushing updates to it anymore. We now have a much wider range of templates, and [tamagui.dev](tamagui.dev) explains neatly how to start on Expo only.
+
 <p align="center">
   <img src="./assets/icon.png" alt="Tamagui Icon"/>
 </p>

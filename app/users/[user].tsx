@@ -1,5 +1,6 @@
+// @ts-nocheck
 import { MaterialCommunityIcons } from "@expo/vector-icons";
-import { Stack, useRouter, useSearchParams } from "expo-router";
+import { Stack, useLocalSearchParams, useRouter } from "expo-router";
 import { Button, H6 } from "tamagui";
 
 import DialogDemo from "../../components/DialogDemo";
@@ -10,7 +11,7 @@ import SwitchDemo from "../../components/SwitchDemo";
 
 export default function User() {
   const router = useRouter();
-  const params = useSearchParams();
+  const params = useLocalSearchParams();
 
   return (
     <MyStack justifyContent="flex-start">

@@ -9,7 +9,7 @@ module.exports = function (api) {
         "transform-inline-environment-variables",
         // NOTE: include is optional, you can leave this part out
         {
-          include: ["TAMAGUI_TARGET", "EXPO_ROUTER_APP_ROOT"]
+          include: ["TAMAGUI_TARGET"]
         }
       ],
       [
@@ -20,8 +20,7 @@ module.exports = function (api) {
           logTimings: true
         }
       ],
-      "react-native-reanimated/plugin",
-      require.resolve("expo-router/babel")
+      "react-native-reanimated/plugin"
     ]
   };
 };
