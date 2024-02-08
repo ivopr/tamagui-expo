@@ -1,6 +1,6 @@
 {
   "name": "tamagui-expo-template",
-  "version": "3.3.6",
+  "version": "4.0.0",
   "main": "expo-router/entry",
   "scripts": {
     "start": "expo start",
